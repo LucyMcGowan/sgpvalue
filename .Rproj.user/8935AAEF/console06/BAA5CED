@@ -250,3 +250,31 @@ To https://github.com/LucyMcGowan/sgpvalue.git
 [36;1m±[0;32m [0;32m|master U:1 [0;31m✗[0;32m| [0;32m→[39m ]0;~/Documents/wonderland/sgpvalue
 [31;1m37% [36;1m2017-09-25 18:03:59 [0;33m [0;35mLeia🐓 [39m in [0;32m~/Documents/wonderland/sgpvalue
 [36;1m±[0;32m [0;32m|master U:1 [0;31m✗[0;32m| [0;32m→[39m git add .
+]0;~/Documents/wonderland/sgpvalue
+[31;1m33% [36;1m2017-09-25 18:11:13 [0;33m [0;35mLeia🐓 [39m in [0;32m~/Documents/wonderland/sgpvalue
+[36;1m±[0;32m [0;32m|master S:27 [0;31m✗[0;32m| [0;32m→[39m git commit -m ":see_no_evil: Fix litt [Kle :bugs[K:s"
+[master d183e76] :see_no_evil: Fix little :bug:s
+ 27 files changed, 272 insertions(+), 134 deletions(-)
+ delete mode 100644 .Rproj.user/8935AAEF/sources/s-202043DD/463EAFA9
+ create mode 100644 .Rproj.user/8935AAEF/sources/s-202043DD/49E09DEC
+ create mode 100644 .Rproj.user/8935AAEF/sources/s-202043DD/49E09DEC-contents
+ delete mode 100644 .Rproj.user/8935AAEF/sources/s-202043DD/55AD27CB
+ rename .Rproj.user/8935AAEF/sources/s-202043DD/{7EA104E0 => 88F8403A} (57%)
+ create mode 100644 .Rproj.user/8935AAEF/sources/s-202043DD/88F8403A-contents
+ rename {sgpvalue => shiny}/app.R (100%)
+]0;~/Documents/wonderland/sgpvalue
+[31;1m32% [36;1m2017-09-25 18:11:39 [0;33m [0;35mLeia🐓 [39m in [0;32m~/Documents/wonderland/sgpvalue
+[36;1m±[0;32m [0;32m|master ↑1 U:1 [0;31m✗[0;32m| [0;32m→[39m git push
+Counting objects: 31, done.
+Delta compression using up to 8 threads.
+Compressing objects:   3% (1/30)   Compressing objects:   6% (2/30)   Compressing objects:  10% (3/30)   Compressing objects:  13% (4/30)   Compressing objects:  16% (5/30)   Compressing objects:  20% (6/30)   Compressing objects:  23% (7/30)   Compressing objects:  26% (8/30)   Compressing objects:  30% (9/30)   Compressing objects:  33% (10/30)   Compressing objects:  36% (11/30)   Compressing objects:  40% (12/30)   Compressing objects:  43% (13/30)   Compressing objects:  46% (14/30)   Compressing objects:  50% (15/30)   Compressing objects:  53% (16/30)   Compressing objects:  56% (17/30)   Compressing objects:  60% (18/30)   Compressing objects:  63% (19/30)   Compressing objects:  66% (20/30)   Compressing objects:  70% (21/30)   Compressing objects:  73% (22/30)   Compressing objects:  76% (23/30)   Compressing objects:  80% (24/30)   Compressing objects:  83% (25/30)   Compressing objects:  86% (26/30)   Compressing objects:  90% (27/30)   Compressing objects:  93% (28/30)   Compressing objects:  96% (29/30)   Compressing objects: 100% (30/30)   Compressing objects: 100% (30/30), done.
+Writing objects:   3% (1/31)   Writing objects:   6% (2/31)   Writing objects:   9% (3/31)   Writing objects:  12% (4/31)   Writing objects:  16% (5/31)   Writing objects:  19% (6/31)   Writing objects:  22% (7/31)   Writing objects:  25% (8/31)   Writing objects:  29% (9/31)   Writing objects:  32% (10/31)   Writing objects:  35% (11/31)   Writing objects:  38% (12/31)   Writing objects:  41% (13/31)   Writing objects:  45% (14/31)   Writing objects:  48% (15/31)   Writing objects:  51% (16/31)   Writing objects:  54% (17/31)   Writing objects:  58% (18/31)   Writing objects:  61% (19/31)   Writing objects:  67% (21/31)   Writing objects:  70% (22/31)   Writing objects:  74% (23/31)   Writing objects:  77% (24/31)   Writing objects:  80% (25/31)   Writing objects:  83% (26/31)   Writing objects:  87% (27/31)   Writing objects:  90% (28/31)   Writing objects:  93% (29/31)   Writing objects:  96% (30/31)   Writing objects: 100% (31/31)   Writing objects: 100% (31/31), 5.39 KiB | 98.00 KiB/s, done.
+Total 31 (delta 16), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/16)   [Kremote: Resolving deltas:   6% (1/16)   [Kremote: Resolving deltas:  12% (2/16)   [Kremote: Resolving deltas:  18% (3/16)   [Kremote: Resolving deltas:  25% (4/16)   [Kremote: Resolving deltas:  31% (5/16)   [Kremote: Resolving deltas:  37% (6/16)   [Kremote: Resolving deltas:  43% (7/16)   [Kremote: Resolving deltas:  50% (8/16)   [Kremote: Resolving deltas:  56% (9/16)   [Kremote: Resolving deltas:  62% (10/16)   [Kremote: Resolving deltas:  68% (11/16)   [Kremote: Resolving deltas:  75% (12/16)   [Kremote: Resolving deltas:  81% (13/16)   [Kremote: Resolving deltas:  87% (14/16)   [Kremote: Resolving deltas:  93% (15/16)   [Kremote: Resolving deltas: 100% (16/16)   [Kremote: Resolving deltas: 100% (16/16), completed with 14 local objects.[K
+To https://github.com/LucyMcGowan/sgpvalue.git
+   59c511d..d183e76  master -> master
+]0;~/Documents/wonderland/sgpvalue
+[31;1m32% [36;1m2017-09-25 18:11:44 [0;33m [0;35mLeia🐓 [39m in [0;32m~/Documents/wonderland/sgpvalue
+[36;1m±[0;32m [0;32m|master U:1 [0;31m✗[0;32m| [0;32m→[39m ]0;~/Documents/wonderland/sgpvalue
+[31;1m32% [36;1m2017-09-25 18:11:44 [0;33m [0;35mLeia🐓 [39m in [0;32m~/Documents/wonderland/sgpvalue
+[36;1m±[0;32m [0;32m|master U:1 [0;31m✗[0;32m| [0;32m→[39m git add .
