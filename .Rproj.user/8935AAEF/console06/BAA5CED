@@ -278,3 +278,50 @@ To https://github.com/LucyMcGowan/sgpvalue.git
 [36;1m±[0;32m [0;32m|master U:1 [0;31m✗[0;32m| [0;32m→[39m ]0;~/Documents/wonderland/sgpvalue
 [31;1m32% [36;1m2017-09-25 18:11:44 [0;33m [0;35mLeia🐓 [39m in [0;32m~/Documents/wonderland/sgpvalue
 [36;1m±[0;32m [0;32m|master U:1 [0;31m✗[0;32m| [0;32m→[39m git add .
+]0;~/Documents/wonderland/sgpvalue
+[31;1m33% [36;1m2017-09-25 18:12:49 [0;33m [0;35mLeia🐓 [39m in [0;32m~/Documents/wonderland/sgpvalue
+[36;1m±[0;32m [0;32m|master S:5 U:1 [0;31m✗[0;32m| [0;32m→[39m git commit -m "i[K:speak_no_evil:"
+[master c44ba0e] :speak_no_evil:
+ 5 files changed, 54 insertions(+), 1 deletion(-)
+ create mode 100644 .Rproj.user/8935AAEF/sources/s-202043DD/BC7F079F
+ create mode 100644 .Rproj.user/8935AAEF/sources/s-202043DD/BC7F079F-contents
+]0;~/Documents/wonderland/sgpvalue
+[31;1m33% [36;1m2017-09-25 18:12:56 [0;33m [0;35mLeia🐓 [39m in [0;32m~/Documents/wonderland/sgpvalue
+[36;1m±[0;32m [0;32m|master ↑1 U:1 [0;31m✗[0;32m| [0;32m→[39m g[Kgit rm -r --cached
+usage: git rm [<options>] [--] <file>...
+
+    -n, --dry-run         dry run
+    -q, --quiet           do not list removed files
+    --cached              only remove from the index
+    -f, --force           override the up-to-date check
+    -r                    allow recursive removal
+    --ignore-unmatch      exit with a zero status even if nothing matched
+
+]0;~/Documents/wonderland/sgpvalue
+[31;1m32% [36;1m2017-09-25 18:14:18 [0;33m [0;35mLeia🐓 [39m in [0;32m~/Documents/wonderland/sgpvalue
+[36;1m±[0;32m [0;32m|master ↑1 U:1 [0;31m✗[0;32m| [0;32m→[39m ]0;~/Documents/wonderland/sgpvalue
+[31;1m32% [36;1m2017-09-25 18:14:21 [0;33m [0;35mLeia🐓 [39m in [0;32m~/Documents/wonderland/sgpvalue
+[36;1m±[0;32m [0;32m|master ↑1 U:1 [0;31m✗[0;32m| [0;32m→[39m git add .
+]0;~/Documents/wonderland/sgpvalue
+[31;1m32% [36;1m2017-09-25 18:14:32 [0;33m [0;35mLeia🐓 [39m in [0;32m~/Documents/wonderland/sgpvalue
+[36;1m±[0;32m [0;32m|master ↑1 S:1 U:1 [0;31m✗[0;32m| [0;32m→[39m ]0;~/Documents/wonderland/sgpvalue
+[31;1m32% [36;1m2017-09-25 18:14:35 [0;33m [0;35mLeia🐓 [39m in [0;32m~/Documents/wonderland/sgpvalue
+[36;1m±[0;32m [0;32m|master ↑1 S:1 U:1 [0;31m✗[0;32m| [0;32m→[39m git rm -r
+usage: git rm [<options>] [--] <file>...
+
+    -n, --dry-run         dry run
+    -q, --quiet           do not list removed files
+    --cached              only remove from the index
+    -f, --force           override the up-to-date check
+    -r                    allow recursive removal
+    --ignore-unmatch      exit with a zero status even if nothing matched
+
+]0;~/Documents/wonderland/sgpvalue
+[31;1m32% [36;1m2017-09-25 18:14:46 [0;33m [0;35mLeia🐓 [39m in [0;32m~/Documents/wonderland/sgpvalue
+[36;1m±[0;32m [0;32m|master ↑1 S:1 U:1 [0;31m✗[0;32m| [0;32m→[39m git -rm[K[K[Krm -r --cached *.Rproj
+rm 'sgpvalue.Rproj'
+]0;~/Documents/wonderland/sgpvalue
+[31;1m32% [36;1m2017-09-25 18:14:55 [0;33m [0;35mLeia🐓 [39m in [0;32m~/Documents/wonderland/sgpvalue
+[36;1m±[0;32m [0;32m|master ↑1 S:2 U:1 [0;31m✗[0;32m| [0;32m→[39m ]0;~/Documents/wonderland/sgpvalue
+[31;1m32% [36;1m2017-09-25 18:14:58 [0;33m [0;35mLeia🐓 [39m in [0;32m~/Documents/wonderland/sgpvalue
+[36;1m±[0;32m [0;32m|master ↑1 S:2 U:1 [0;31m✗[0;32m| [0;32m→[39m git add.[K .
