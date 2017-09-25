@@ -1,327 +1,0 @@
-]0;~/Documents/wonderland/sgpvalue[?1034h
-[31;1m46% [36;1m2017-09-25 17:42:20 [0;33m [0;35mLeia🐓 [39m in [0;32m~/Documents/wonderland/sgpvalue
-[36;1m○[0;32m [0;32m→[39m git init
-Initialized empty Git repository in /Users/lucymcgowan/Documents/wonderland/sgpvalue/.git/
-]0;~/Documents/wonderland/sgpvalue
-[31;1m46% [36;1m2017-09-25 17:42:23 [0;33m [0;35mLeia🐓 [39m in [0;32m~/Documents/wonderland/sgpvalue
-[36;1m±[0;32m [0;32m|master ?:22 [0;31m✗[0;32m| [0;32m→[39m git add .
-]0;~/Documents/wonderland/sgpvalue
-[31;1m46% [36;1m2017-09-25 17:42:25 [0;33m [0;35mLeia🐓 [39m in [0;32m~/Documents/wonderland/sgpvalue
-[36;1m±[0;32m [0;32m|master S:92 [0;31m✗[0;32m| [0;32m→[39m git commit -m ":d[Ktada: First com mit"
-[master (root-commit) d30d928] :tada: First commit
- 92 files changed, 1899 insertions(+)
- create mode 100644 .Rbuildignore
- create mode 100644 .Rproj.user/8935AAEF/console06/BAA5CED
- create mode 100644 .Rproj.user/8935AAEF/console06/INDEX001
- create mode 100644 .Rproj.user/8935AAEF/cpp-definition-cache
- create mode 100644 .Rproj.user/8935AAEF/pcs/files-pane.pper
- create mode 100644 .Rproj.user/8935AAEF/pcs/source-pane.pper
- create mode 100644 .Rproj.user/8935AAEF/pcs/windowlayoutstate.pper
- create mode 100644 .Rproj.user/8935AAEF/pcs/workbench-pane.pper
- create mode 100644 .Rproj.user/8935AAEF/persistent-state
- create mode 100644 .Rproj.user/8935AAEF/rmd-outputs
- create mode 100644 .Rproj.user/8935AAEF/saved_source_markers
- create mode 100644 .Rproj.user/8935AAEF/sources/prop/13BE3DB
- create mode 100644 .Rproj.user/8935AAEF/sources/prop/1BBC2FBB
- create mode 100644 .Rproj.user/8935AAEF/sources/prop/21E114C2
- create mode 100644 .Rproj.user/8935AAEF/sources/prop/5E9BD6C6
- create mode 100644 .Rproj.user/8935AAEF/sources/prop/6CD23334
- create mode 100644 .Rproj.user/8935AAEF/sources/prop/9C6C18B7
- create mode 100644 .Rproj.user/8935AAEF/sources/prop/A45CFC38
- create mode 100644 .Rproj.user/8935AAEF/sources/prop/AF4D0A75
- create mode 100644 .Rproj.user/8935AAEF/sources/prop/CBD93BA8
- create mode 100644 .Rproj.user/8935AAEF/sources/prop/D86E3689
- create mode 100644 .Rproj.user/8935AAEF/sources/prop/E506EB9D
- create mode 100644 .Rproj.user/8935AAEF/sources/prop/EF8901C8
- create mode 100644 .Rproj.user/8935AAEF/sources/prop/INDEX
- create mode 100644 .Rproj.user/8935AAEF/sources/s-202043DD/20EBA25
- create mode 100644 .Rproj.user/8935AAEF/sources/s-202043DD/20EBA25-contents
- create mode 100644 .Rproj.user/8935AAEF/sources/s-202043DD/22E34997-contents
- create mode 100644 .Rproj.user/8935AAEF/sources/s-202043DD/2C58F7A4-contents
- create mode 100644 .Rproj.user/8935AAEF/sources/s-202043DD/2C5E3018-contents
- create mode 100644 .Rproj.user/8935AAEF/sources/s-202043DD/30C4AAB4-contents
- create mode 100644 .Rproj.user/8935AAEF/sources/s-202043DD/35DE35EB-contents
- create mode 100644 .Rproj.user/8935AAEF/sources/s-202043DD/3694B0AE-contents
- create mode 100644 .Rproj.user/8935AAEF/sources/s-202043DD/3AF180CE
- create mode 100644 .Rproj.user/8935AAEF/sources/s-202043DD/3AF180CE-contents
- create mode 100644 .Rproj.user/8935AAEF/sources/s-202043DD/3E844FC0-contents
- create mode 100644 .Rproj.user/8935AAEF/sources/s-202043DD/42980403-contents
- create mode 100644 .Rproj.user/8935AAEF/sources/s-202043DD/463EAFA9
- create mode 100644 .Rproj.user/8935AAEF/sources/s-202043DD/463EAFA9-contents
- create mode 100644 .Rproj.user/8935AAEF/sources/s-202043DD/4B023567-contents
- create mode 100644 .Rproj.user/8935AAEF/sources/s-202043DD/51E78A5F-contents
- create mode 100644 .Rproj.user/8935AAEF/sources/s-202043DD/55AD27CB
- create mode 100644 .Rproj.user/8935AAEF/sources/s-202043DD/55AD27CB-contents
- create mode 100644 .Rproj.user/8935AAEF/sources/s-202043DD/592A75E8-contents
- create mode 100644 .Rproj.user/8935AAEF/sources/s-202043DD/7EA104E0
- create mode 100644 .Rproj.user/8935AAEF/sources/s-202043DD/7EA104E0-contents
- create mode 100644 .Rproj.user/8935AAEF/sources/s-202043DD/B84722F-contents
- create mode 100644 .Rproj.user/8935AAEF/sources/s-202043DD/C688D6D6-contents
- create mode 100644 .Rproj.user/8935AAEF/sources/s-202043DD/C8571F4F-contents
- create mode 100644 .Rproj.user/8935AAEF/sources/s-202043DD/CEF49017-contents
- create mode 100644 .Rproj.user/8935AAEF/sources/s-202043DD/CFF28412-contents
- create mode 100644 .Rproj.user/8935AAEF/sources/s-202043DD/E6662E47-contents
- create mode 100644 .Rproj.user/8935AAEF/sources/s-202043DD/ED102429
- create mode 100644 .Rproj.user/8935AAEF/sources/s-202043DD/ED102429-contents
- create mode 100644 .Rproj.user/8935AAEF/sources/s-202043DD/F5B88880-contents
- create mode 100644 .Rproj.user/8935AAEF/sources/s-202043DD/F72C2A47-contents
- create mode 100644 .Rproj.user/8935AAEF/sources/s-202043DD/lock_file
- create mode 100644 .Rproj.user/shared/notebooks/9FDFE5D8-README/1/8935AAEF202043DD/chunks.json
- create mode 100644 .Rproj.user/shared/notebooks/9FDFE5D8-README/1/s/c3tes8u76amlx/000002.csv
- create mode 100644 .Rproj.user/shared/notebooks/9FDFE5D8-README/1/s/c3tes8u76amlx/000003.metadata
- create mode 100644 .Rproj.user/shared/notebooks/9FDFE5D8-README/1/s/c3tes8u76amlx/000003.rdf
- create mode 100644 .Rproj.user/shared/notebooks/9FDFE5D8-README/1/s/c3tes8u76amlx/000004.metadata
- create mode 100644 .Rproj.user/shared/notebooks/9FDFE5D8-README/1/s/c3tes8u76amlx/000004.png
- create mode 100644 .Rproj.user/shared/notebooks/9FDFE5D8-README/1/s/c3tes8u76amlx/000004.snapshot
- create mode 100644 .Rproj.user/shared/notebooks/9FDFE5D8-README/1/s/chunks.json
- create mode 100644 .Rproj.user/shared/notebooks/9FDFE5D8-README/1/s/cx76pfurleg3u/000002.csv
- create mode 100644 .Rproj.user/shared/notebooks/patch-chunk-names
- create mode 100644 .Rproj.user/shared/notebooks/paths
- create mode 100644 DESCRIPTION
- create mode 100644 LICENSE
- create mode 100644 NAMESPACE
- create mode 100644 R/compare_p.R
- create mode 100644 R/p_delta.R
- create mode 100644 R/power_curves.R
- create mode 100644 README-fig_2-1.png
- create mode 100644 README-fig_s3-1.png
- create mode 100644 README-fig_s5-1.png
- create mode 100644 README-fig_s5-2.png
- create mode 100644 README-fig_s6-1.png
- create mode 100644 README-fig_s6-2.png
- create mode 100644 README-unnamed-chunk-3-1.png
- create mode 100644 README-unnamed-chunk-4-1.png
- create mode 100644 README-unnamed-chunk-5-1.png
- create mode 100644 README-unnamed-chunk-5-2.png
- create mode 100644 README-unnamed-chunk-6-1.png
- create mode 100644 README-unnamed-chunk-6-2.png
- create mode 100644 README.Rmd
- create mode 100644 README.md
- create mode 100644 man/compare_p.Rd
- create mode 100644 man/hello.Rd
- create mode 100644 man/p_delta.Rd
- create mode 100644 man/power_curves.Rd
- create mode 100644 sgpvalue.Rproj
-]0;~/Documents/wonderland/sgpvalue
-[31;1m46% [36;1m2017-09-25 17:42:34 [0;33m [0;35mLeia🐓 [39m in [0;32m~/Documents/wonderland/sgpvalue
-[36;1m±[0;32m [0;32m|master U:1 [0;31m✗[0;32m| [0;32m→[39m ]0;~/Documents/wonderland/sgpvalue
-[31;1m46% [36;1m2017-09-25 17:42:37 [0;33m [0;35mLeia🐓 [39m in [0;32m~/Documents/wonderland/sgpvalue
-[36;1m±[0;32m [0;32m|master U:1 [0;31m✗[0;32m| [0;32m→[39m git add .
-]0;~/Documents/wonderland/sgpvalue
-[31;1m46% [36;1m2017-09-25 17:42:57 [0;33m [0;35mLeia🐓 [39m in [0;32m~/Documents/wonderland/sgpvalue
-[36;1m±[0;32m [0;32m|master S:3 U:1 [0;31m✗[0;32m| [0;32m→[39m git commit -m "Remoe[Kve old ma n"
-[master 98f0926] Remove old man
- 3 files changed, 178 insertions(+), 12 deletions(-)
- create mode 100644 .Rproj.user/8935AAEF/console06/BAA5CED.env
- delete mode 100644 man/hello.Rd
-]0;~/Documents/wonderland/sgpvalue
-[31;1m46% [36;1m2017-09-25 17:43:06 [0;33m [0;35mLeia🐓 [39m in [0;32m~/Documents/wonderland/sgpvalue
-[36;1m±[0;32m [0;32m|master U:1 [0;31m✗[0;32m| [0;32m→[39m git push
-fatal: No configured push destination.
-Either specify the URL from the command-line or configure a remote repository using
-
-    git remote add <name> <url>
-
-and then push using the remote name
-
-    git push <name>
-
-]0;~/Documents/wonderland/sgpvalue
-[31;1m46% [36;1m2017-09-25 17:43:10 [0;33m [0;35mLeia🐓 [39m in [0;32m~/Documents/wonderland/sgpvalue
-[36;1m±[0;32m [0;32m|master U:1 [0;31m✗[0;32m| [0;32m→[39m git remote add origin https://gi thub.com/LucyMcGowan/sgpvalue.git
-]0;~/Documents/wonderland/sgpvalue
-[31;1m45% [36;1m2017-09-25 17:43:19 [0;33m [0;35mLeia🐓 [39m in [0;32m~/Documents/wonderland/sgpvalue
-[36;1m±[0;32m [0;32m|master U:1 [0;31m✗[0;32m| [0;32m→[39m git push -u origin master
-Counting objects: 93, done.
-Delta compression using up to 8 threads.
-Compressing objects:   1% (1/81)   Compressing objects:   2% (2/81)   Compressing objects:   3% (3/81)   Compressing objects:   4% (4/81)   Compressing objects:   6% (5/81)   Compressing objects:   7% (6/81)   Compressing objects:   8% (7/81)   Compressing objects:   9% (8/81)   Compressing objects:  11% (9/81)   Compressing objects:  12% (10/81)   Compressing objects:  13% (11/81)   Compressing objects:  14% (12/81)   Compressing objects:  16% (13/81)   Compressing objects:  17% (14/81)   Compressing objects:  18% (15/81)   Compressing objects:  19% (16/81)   Compressing objects:  20% (17/81)   Compressing objects:  22% (18/81)   Compressing objects:  23% (19/81)   Compressing objects:  24% (20/81)   Compressing objects:  25% (21/81)   Compressing objects:  27% (22/81)   Compressing objects:  28% (23/81)   Compressing objects:  29% (24/81)   Compressing objects:  30% (25/81)   Compressing objects:  32% (26/81)   Compressing objects:  33% (27/81)   Compressing objects:  34% (28/81)   Compressing objects:  35% (29/81)   Compressing objects:  37% (30/81)   Compressing objects:  38% (31/81)   Compressing objects:  39% (32/81)   Compressing objects:  40% (33/81)   Compressing objects:  41% (34/81)   Compressing objects:  43% (35/81)   Compressing objects:  44% (36/81)   Compressing objects:  45% (37/81)   Compressing objects:  46% (38/81)   Compressing objects:  48% (39/81)   Compressing objects:  49% (40/81)   Compressing objects:  50% (41/81)   Compressing objects:  51% (42/81)   Compressing objects:  53% (43/81)   Compressing objects:  54% (44/81)   Compressing objects:  55% (45/81)   Compressing objects:  56% (46/81)   Compressing objects:  58% (47/81)   Compressing objects:  59% (48/81)   Compressing objects:  60% (49/81)   Compressing objects:  61% (50/81)   Compressing objects:  62% (51/81)   Compressing objects:  64% (52/81)   Compressing objects:  65% (53/81)   Compressing objects:  66% (54/81)   Compressing objects:  67% (55/81)   Compressing objects:  69% (56/81)   Compressing objects:  70% (57/81)   Compressing objects:  71% (58/81)   Compressing objects:  72% (59/81)   Compressing objects:  74% (60/81)   Compressing objects:  75% (61/81)   Compressing objects:  76% (62/81)   Compressing objects:  77% (63/81)   Compressing objects:  79% (64/81)   Compressing objects:  80% (65/81)   Compressing objects:  81% (66/81)   Compressing objects:  82% (67/81)   Compressing objects:  83% (68/81)   Compressing objects:  85% (69/81)   Compressing objects:  86% (70/81)   Compressing objects:  87% (71/81)   Compressing objects:  88% (72/81)   Compressing objects:  90% (73/81)   Compressing objects:  91% (74/81)   Compressing objects:  92% (75/81)   Compressing objects:  93% (76/81)   Compressing objects:  95% (77/81)   Compressing objects:  96% (78/81)   Compressing objects:  97% (79/81)   Compressing objects:  98% (80/81)   Compressing objects: 100% (81/81)   Compressing objects: 100% (81/81), done.
-Writing objects:   1% (1/93)   Writing objects:   2% (2/93)   Writing objects:   3% (3/93)   Writing objects:   4% (4/93)   Writing objects:   5% (5/93)   Writing objects:   6% (6/93)   Writing objects:   7% (7/93)   Writing objects:   8% (8/93)   Writing objects:   9% (9/93)   Writing objects:  10% (10/93)   Writing objects:  11% (11/93)   Writing objects:  12% (12/93)   Writing objects:  13% (13/93)   Writing objects:  15% (14/93)   Writing objects:  16% (15/93)   Writing objects:  17% (16/93)   Writing objects:  18% (17/93)   Writing objects:  19% (18/93)   Writing objects:  20% (19/93)   Writing objects:  21% (20/93)   Writing objects:  22% (21/93)   Writing objects:  23% (22/93)   Writing objects:  24% (23/93)   Writing objects:  25% (24/93)   Writing objects:  26% (25/93)   Writing objects:  27% (26/93)   Writing objects:  29% (27/93)   Writing objects:  30% (28/93)   Writing objects:  31% (29/93)   Writing objects:  32% (30/93)   Writing objects:  33% (31/93)   Writing objects:  34% (32/93)   Writing objects:  35% (33/93)   Writing objects:  36% (34/93)   Writing objects:  37% (35/93)   Writing objects:  38% (36/93)   Writing objects:  39% (37/93)   Writing objects:  40% (38/93)   Writing objects:  41% (39/93)   Writing objects:  43% (40/93)   Writing objects:  44% (41/93)   Writing objects:  45% (42/93)   Writing objects:  46% (43/93)   Writing objects:  47% (44/93)   Writing objects:  48% (45/93)   Writing objects:  49% (46/93)   Writing objects:  50% (47/93)   Writing objects:  51% (48/93)   Writing objects:  52% (49/93)   Writing objects:  53% (50/93)   Writing objects:  54% (51/93)   Writing objects:  55% (52/93)   Writing objects:  56% (53/93)   Writing objects:  58% (54/93)   Writing objects:  59% (55/93)   Writing objects:  60% (56/93)   Writing objects:  61% (57/93)   Writing objects:  62% (58/93)   Writing objects:  64% (60/93)   Writing objects:  65% (61/93)   Writing objects:  66% (62/93)   Writing objects:  67% (63/93)   Writing objects:  68% (64/93)   Writing objects:  69% (65/93)   Writing objects:  70% (66/93)   Writing objects:  72% (67/93)   Writing objects:  73% (68/93)   Writing objects:  74% (69/93)   Writing objects:  75% (70/93)   Writing objects:  76% (71/93)   Writing objects:  77% (72/93)   Writing objects:  78% (73/93)   Writing objects:  79% (74/93)   Writing objects:  80% (75/93)   Writing objects:  81% (76/93)   Writing objects:  82% (77/93)   Writing objects:  83% (78/93)   Writing objects:  84% (79/93)   Writing objects:  86% (80/93)   Writing objects:  87% (81/93)   Writing objects:  89% (83/93)   Writing objects:  90% (84/93)   Writing objects:  91% (85/93)   Writing objects:  92% (86/93)   Writing objects:  93% (87/93)   Writing objects:  94% (88/93)   Writing objects:  95% (89/93)   Writing objects:  96% (90/93)   Writing objects:  97% (91/93)   Writing objects:  98% (92/93)   Writing objects: 100% (93/93)   Writing objects: 100% (93/93), 244.82 KiB | 1.45 MiB/s, done.
-Total 93 (delta 10), reused 0 (delta 0)
-remote: Resolving deltas:   0% (0/10)   [Kremote: Resolving deltas:  10% (1/10)   [Kremote: Resolving deltas:  20% (2/10)   [Kremote: Resolving deltas:  30% (3/10)   [Kremote: Resolving deltas:  40% (4/10)   [Kremote: Resolving deltas:  70% (7/10)   [Kremote: Resolving deltas:  80% (8/10)   [Kremote: Resolving deltas:  90% (9/10)   [Kremote: Resolving deltas: 100% (10/10)   [Kremote: Resolving deltas: 100% (10/10), done.[K
-To https://github.com/LucyMcGowan/sgpvalue.git
- * [new branch]      master -> master
-Branch master set up to track remote branch master from origin.
-]0;~/Documents/wonderland/sgpvalue
-[31;1m45% [36;1m2017-09-25 17:43:25 [0;33m [0;35mLeia🐓 [39m in [0;32m~/Documents/wonderland/sgpvalue
-[36;1m±[0;32m [0;32m|master U:1 [0;31m✗[0;32m| [0;32m→[39m ]0;~/Documents/wonderland/sgpvalue
-[31;1m45% [36;1m2017-09-25 17:43:26 [0;33m [0;35mLeia🐓 [39m in [0;32m~/Documents/wonderland/sgpvalue
-[36;1m±[0;32m [0;32m|master U:1 [0;31m✗[0;32m| [0;32m→[39m git add .
-]0;~/Documents/wonderland/sgpvalue
-[31;1m45% [36;1m2017-09-25 17:44:56 [0;33m [0;35mLeia🐓 [39m in [0;32m~/Documents/wonderland/sgpvalue
-[36;1m±[0;32m [0;32m|master S:7 U:1 [0;31m✗[0;32m| [0;32m→[39m git commit -m "Update Rea[K[KEADME "
-[master 4a21ad2] Update README
- 7 files changed, 52 insertions(+), 17 deletions(-)
-]0;~/Documents/wonderland/sgpvalue
-[31;1m45% [36;1m2017-09-25 17:45:02 [0;33m [0;35mLeia🐓 [39m in [0;32m~/Documents/wonderland/sgpvalue
-[36;1m±[0;32m [0;32m|master ↑1 U:1 [0;31m✗[0;32m| [0;32m→[39m git push
-Counting objects: 18, done.
-Delta compression using up to 8 threads.
-Compressing objects:   6% (1/16)   Compressing objects:  12% (2/16)   Compressing objects:  18% (3/16)   Compressing objects:  25% (4/16)   Compressing objects:  31% (5/16)   Compressing objects:  37% (6/16)   Compressing objects:  43% (7/16)   Compressing objects:  50% (8/16)   Compressing objects:  56% (9/16)   Compressing objects:  62% (10/16)   Compressing objects:  68% (11/16)   Compressing objects:  75% (12/16)   Compressing objects:  81% (13/16)   Compressing objects:  87% (14/16)   Compressing objects:  93% (15/16)   Compressing objects: 100% (16/16)   Compressing objects: 100% (16/16), done.
-Writing objects:   5% (1/18)   Writing objects:  11% (2/18)   Writing objects:  16% (3/18)   Writing objects:  22% (4/18)   Writing objects:  27% (5/18)   Writing objects:  33% (6/18)   Writing objects:  38% (7/18)   Writing objects:  44% (8/18)   Writing objects:  50% (9/18)   Writing objects:  55% (10/18)   Writing objects:  61% (11/18)   Writing objects:  66% (12/18)   Writing objects:  72% (13/18)   Writing objects:  77% (14/18)   Writing objects:  83% (15/18)   Writing objects:  88% (16/18)   Writing objects:  94% (17/18)   Writing objects: 100% (18/18)   Writing objects: 100% (18/18), 3.98 KiB | 453.00 KiB/s, done.
-Total 18 (delta 7), reused 0 (delta 0)
-remote: Resolving deltas:   0% (0/7)   [Kremote: Resolving deltas:  14% (1/7)   [Kremote: Resolving deltas:  28% (2/7)   [Kremote: Resolving deltas:  42% (3/7)   [Kremote: Resolving deltas:  57% (4/7)   [Kremote: Resolving deltas:  71% (5/7)   [Kremote: Resolving deltas:  85% (6/7)   [Kremote: Resolving deltas: 100% (7/7)   [Kremote: Resolving deltas: 100% (7/7), completed with 7 local objects.[K
-To https://github.com/LucyMcGowan/sgpvalue.git
-   98f0926..4a21ad2  master -> master
-]0;~/Documents/wonderland/sgpvalue
-[31;1m45% [36;1m2017-09-25 17:45:07 [0;33m [0;35mLeia🐓 [39m in [0;32m~/Documents/wonderland/sgpvalue
-[36;1m±[0;32m [0;32m|master U:1 [0;31m✗[0;32m| [0;32m→[39m ]0;~/Documents/wonderland/sgpvalue
-[31;1m45% [36;1m2017-09-25 17:45:07 [0;33m [0;35mLeia🐓 [39m in [0;32m~/Documents/wonderland/sgpvalue
-[36;1m±[0;32m [0;32m|master U:1 [0;31m✗[0;32m| [0;32m→[39m [K[36;1m±[0;32m [0;32m|master U:1 [0;31m✗[0;32m| [0;32m→[39m [K[36;1m±[0;32m [0;32m|master U:1 [0;31m✗[0;32m| [0;32m→[39m git diff
-[?1h=[1mdiff --git a/.Rbuildignore b/.Rbuildignore[m[m
-[1mindex 8453a6f..3b8a042 100644[m[m
-[1m--- a/.Rbuildignore[m[m
-[1m+++ b/.Rbuildignore[m[m
-[36m@@ -2,3 +2,4 @@[m[m
- ^\.Rproj\.user$[m[m
- ^README\.Rmd$[m[m
- ^README-.*\.png$[m[m
-[32m+[m[32m^app.R$[m[m
-[1mdiff --git a/.Rproj.user/8935AAEF/console06/BAA5CED b/.Rproj.user/8935[m [1mAAEF/console06/BAA5CED[m[m
-[1mindex dfeb257..8d385ef 100644[m[m
-[1m--- a/.Rproj.user/8935AAEF/console06/BAA5CED[m[m
-[1m+++ b/.Rproj.user/8935AAEF/console06/BAA5CED[m[m
-:[K[K[36m@@ -145,4 +145,25 @@[m [mBranch master set up to track remote branch maste[m :[K[K[36m[m[mr from origin.[m[m
-:[K[K [31;1m45% [36;1m2017-09-25 17:43:25 [0;33m [0;35mLeia[7m<U+1F413>[27m [39m in [0;32m~/Documents/wonderland/sgp[m :[K[K[31;1m[36;1m[0;33m[0;35m[39m[0;32mvalue[7m^M[27m[m[m
-:[K[K [36;1m±[0;32m [0;32m|master U:1 [0;31m✗[0;32m| [0;32m→[39m 0;~/Documents/wonderland/sgpvalue[7m^G^M[27m[m[m
-:[K[K [31;1m45% [36;1m2017-09-25 17:43:26 [0;33m [0;35mLeia[7m<U+1F413>[27m [39m in [0;32m~/Documents/wonderland/sgp[m :[K[K[31;1m[36;1m[0;33m[0;35m[39m[0;32mvalue[7m^M[27m[m[m
-:[K[K[31m-[36;1m±[0;32m [0;32m|master U:1 [0;31m✗[0;32m| [0;32m→[39m git add .[m[m
-:[K[K\ No newline at end of file[m[m
-:[K[K[32m+[m[32m[36;1m±[0;32m [0;32m|master U:1 [0;31m✗[0;32m| [0;32m→[39m git add .[m[41m[7m^M[27m[m[m
-:[K[K[32m+[m[32m0;~/Documents/wonderland/sgpvalue[7m^G[27m[m[41m[7m^M^M[27m[m[m
-:[K[K[32m+[m[32m[31;1m45% [36;1m2017-09-25 17:44:56 [0;33m [0;35mLeia[7m<U+1F413>[27m [39m in [0;32m~/Documents/wonderland/sgp[m :[K[K[32m[m[32m[31;1m[36;1m[0;33m[0;35m[39m[0;32mvalue[m[41m[7m^M^M[27m[m[m
-:[K[K[32m+[m[32m[36;1m±[0;32m [0;32m|master S:7 U:1 [0;31m✗[0;32m| [0;32m→[39m git commit -m "Update README [7m^M[27m"[m[41m[7m^M[27m[m[m
-:[K[K[32m+[m[32m[master 4a21ad2] Update README[m[41m[7m^M[27m[m[m
-:[K[K[32m+[m[32m 7 files changed, 52 insertions(+), 17 deletions(-)[m[41m[7m^M[27m[m[m
-:[K[K[32m+[m[32m0;~/Documents/wonderland/sgpvalue[7m^G[27m[m[41m[7m^M^M[27m[m[m
-:[K[K[32m+[m[32m[31;1m45% [36;1m2017-09-25 17:45:02 [0;33m [0;35mLeia[7m<U+1F413>[27m [39m in [0;32m~/Documents/wonderland/sgp[m :[K[K[32m[m[32m[31;1m[36;1m[0;33m[0;35m[39m[0;32mvalue[m[41m[7m^M^M[27m[m[m
-:[K[K[32m+[m[32m[36;1m±[0;32m [0;32m|master ↑1 U:1 [0;31m✗[0;32m| [0;32m→[39m git push[m[41m[7m^M[27m[m[m
-:[K[K[32m+[m[32mCounting objects: 18, done.[m[41m[7m^M[27m[m[m
-:[K[K[32m+[m[32mDelta compression using up to 8 threads.[m[41m[7m^M[27m[m[m
-:[K[K[32m+[m[32mCompressing objects:   6% (1/16)   [7m^M[27mCompressing objects:  12% (2/16)[m :[K[K[32m[m[32m   [7m^M[27mCompressing objects:  18% (3/16)   [7m^M[27mCompressing objects:  25% (4[m :[K[K[32m[m[32m/16)   [7m^M[27mCompressing objects:  31% (5/16)   [7m^M[27mCompressing objects:  37[m :[K[K[32m[m[32m% (6/16)   [7m^M[27mCompressing objects:  43% (7/16)   [7m^M[27mCompressing objects:[m :[K[K[32m[m[32m  50% (8/16)   [7m^M[27mCompressing objects:  56% (9/16)   [7m^M[27mCompressing obje[m :[K[K[32m[m[32mcts:  62% (10/16)   [7m^M[27mCompressing objects:  68% (11/16)   [7m^M[27mCompressin[m :[K[K[32m[m[32mg objects:  75% (12/16)   [7m^M[27mCompressing objects:  81% (13/16)   [7m^M[27mComp[m :[K[K[32m[m[32mressing objects:  87% (14/16)   [7m^M[27mCompressing objects:  93% (15/16)   [m :[K[K[32m[m[32m[7m^M[27mCompressing objects: 100% (16/16)   [7m^M[27mCompressing objects: 100% (16/[m :[K[K[32m[m[32m16), done.[m[41m[7m^M[27m[m[m
-:[K[K[32m+[m[32mWriting objects:   5% (1/18)   [7m^M[27mWriting objects:  11% (2/18)   [7m^M[27mWri[m :[K[K[32m[m[32mting objects:  16% (3/18)   [7m^M[27mWriting objects:  22% (4/18)   [7m^M[27mWriting[m :[K[K[32m[m[32m objects:  27% (5/18)   [7m^M[27mWriting objects:  33% (6/18)   [7m^M[27mWriting obj[m :[K[K[32m[m[32mects:  38% (7/18)   [7m^M[27mWriting objects:  44% (8/18)   [7m^M[27mWriting objects[m :[K[K[32m[m[32m:  50% (9/18)   [7m^M[27mWriting objects:  55% (10/18)   [7m^M[27mWriting objects:  [m :[K[K[32m[m[32m61% (11/18)   [7m^M[27mWriting objects:  66% (12/18)   [7m^M[27mWriting objects:  72[m :[K[K[32m[m[32m% (13/18)   [7m^M[27mWriting objects:  77% (14/18)   [7m^M[27mWriting objects:  83% [m :[K[K[32m[m[32m(15/18)   [7m^M[27mWriting objects:  88% (16/18)   [7m^M[27mWriting objects:  94% (1[m :[K[K[32m[m[32m7/18)   [7m^M[27mWriting objects: 100% (18/18)   [7m^M[27mWriting objects: 100% (18/[m :[K[K[32m[m[32m18), 3.98 KiB | 453.00 KiB/s, done.[m[41m[7m^M[27m[m[m
-:[K[K[32m+[m[32mTotal 18 (delta 7), reused 0 (delta 0)[m[41m[7m^M[27m[m[m
-:[K[K[32m+[m[32mremote: Resolving deltas:   0% (0/7)   [7m^M[27mremote: Resolving deltas:  1[m :[K[K[32m[m[32m4% (1/7)   [7m^M[27mremote: Resolving deltas:  28% (2/7)   [7m^M[27mremote: Resolvin[m :[K[K[?1l>]0;~/Documents/wonderland/sgpvalue
-[31;1m38% [36;1m2017-09-25 18:02:07 [0;33m [0;35mLeia🐓 [39m in [0;32m~/Documents/wonderland/sgpvalue
-[36;1m±[0;32m [0;32m|master U:6 ?:14 [0;31m✗[0;32m| [0;32m→[39m 
-]0;~/Documents/wonderland/sgpvalue
-[31;1m38% [36;1m2017-09-25 18:02:08 [0;33m [0;35mLeia🐓 [39m in [0;32m~/Documents/wonderland/sgpvalue
-[36;1m±[0;32m [0;32m|master U:6 ?:14 [0;31m✗[0;32m| [0;32m→[39m ]0;~/Documents/wonderland/sgpvalue
-[31;1m38% [36;1m2017-09-25 18:02:11 [0;33m [0;35mLeia🐓 [39m in [0;32m~/Documents/wonderland/sgpvalue
-[36;1m±[0;32m [0;32m|master U:6 ?:14 [0;31m✗[0;32m| [0;32m→[39m git add [K[K[K[K[K[K[K[Ktouch .gitignore
-]0;~/Documents/wonderland/sgpvalue
-[31;1m37% [36;1m2017-09-25 18:02:59 [0;33m [0;35mLeia🐓 [39m in [0;32m~/Documents/wonderland/sgpvalue
-[36;1m±[0;32m [0;32m|master U:6 ?:14 [0;31m✗[0;32m| [0;32m→[39m ]0;~/Documents/wonderland/sgpvalue
-[31;1m37% [36;1m2017-09-25 18:03:02 [0;33m [0;35mLeia🐓 [39m in [0;32m~/Documents/wonderland/sgpvalue
-[36;1m±[0;32m [0;32m|master U:6 ?:14 [0;31m✗[0;32m| [0;32m→[39m git ad [Kd .
-]0;~/Documents/wonderland/sgpvalue
-[31;1m37% [36;1m2017-09-25 18:03:45 [0;33m [0;35mLeia🐓 [39m in [0;32m~/Documents/wonderland/sgpvalue
-[36;1m±[0;32m [0;32m|master S:22 [0;31m✗[0;32m| [0;32m→[39m git commit -m "Update Liscen[K[K[K[Kcense"
-[master 59c511d] Update License
- 22 files changed, 256 insertions(+), 4 deletions(-)
- create mode 100644 .Rproj.user/8935AAEF/sources/prop/2DF4BEAD
- create mode 100644 .Rproj.user/8935AAEF/sources/prop/3B3FF2A6
- create mode 100644 .Rproj.user/8935AAEF/sources/prop/65217F24
- create mode 100644 .Rproj.user/8935AAEF/sources/prop/936A1E48
- create mode 100644 .Rproj.user/8935AAEF/sources/s-202043DD/1762C53D-contents
- create mode 100644 .Rproj.user/8935AAEF/sources/s-202043DD/21A6B2A1
- create mode 100644 .Rproj.user/8935AAEF/sources/s-202043DD/21A6B2A1-contents
- create mode 100644 .Rproj.user/8935AAEF/sources/s-202043DD/2B72E533-contents
- create mode 100644 .Rproj.user/8935AAEF/sources/s-202043DD/50DB90CA
- create mode 100644 .Rproj.user/8935AAEF/sources/s-202043DD/50DB90CA-contents
- create mode 100644 .Rproj.user/8935AAEF/sources/s-202043DD/538D7ADA-contents
- create mode 100644 .Rproj.user/8935AAEF/sources/s-202043DD/F3BEF708
- create mode 100644 .Rproj.user/8935AAEF/sources/s-202043DD/F3BEF708-contents
- rewrite .Rproj.user/shared/notebooks/9FDFE5D8-README/1/s/c3tes8u76amlx/000004.png (96%)
- create mode 100644 .gitignore
- create mode 100644 sgpvalue/app.R
-]0;~/Documents/wonderland/sgpvalue
-[31;1m37% [36;1m2017-09-25 18:03:52 [0;33m [0;35mLeia🐓 [39m in [0;32m~/Documents/wonderland/sgpvalue
-[36;1m±[0;32m [0;32m|master ↑1 U:1 [0;31m✗[0;32m| [0;32m→[39m git push
-Counting objects: 32, done.
-Delta compression using up to 8 threads.
-Compressing objects:   3% (1/27)   Compressing objects:   7% (2/27)   Compressing objects:  11% (3/27)   Compressing objects:  14% (4/27)   Compressing objects:  18% (5/27)   Compressing objects:  22% (6/27)   Compressing objects:  25% (7/27)   Compressing objects:  29% (8/27)   Compressing objects:  33% (9/27)   Compressing objects:  37% (10/27)   Compressing objects:  40% (11/27)   Compressing objects:  44% (12/27)   Compressing objects:  48% (13/27)   Compressing objects:  51% (14/27)   Compressing objects:  55% (15/27)   Compressing objects:  59% (16/27)   Compressing objects:  62% (17/27)   Compressing objects:  66% (18/27)   Compressing objects:  70% (19/27)   Compressing objects:  74% (20/27)   Compressing objects:  77% (21/27)   Compressing objects:  81% (22/27)   Compressing objects:  85% (23/27)   Compressing objects:  88% (24/27)   Compressing objects:  92% (25/27)   Compressing objects:  96% (26/27)   Compressing objects: 100% (27/27)   Compressing objects: 100% (27/27), done.
-Writing objects:   3% (1/32)   Writing objects:   6% (2/32)   Writing objects:   9% (3/32)   Writing objects:  12% (4/32)   Writing objects:  15% (5/32)   Writing objects:  18% (6/32)   Writing objects:  21% (7/32)   Writing objects:  25% (8/32)   Writing objects:  28% (9/32)   Writing objects:  31% (10/32)   Writing objects:  34% (11/32)   Writing objects:  37% (12/32)   Writing objects:  40% (13/32)   Writing objects:  43% (14/32)   Writing objects:  46% (15/32)   Writing objects:  56% (18/32)   Writing objects:  59% (19/32)   Writing objects:  62% (20/32)   Writing objects:  65% (21/32)   Writing objects:  68% (22/32)   Writing objects:  71% (23/32)   Writing objects:  75% (24/32)   Writing objects:  78% (25/32)   Writing objects:  81% (26/32)   Writing objects:  84% (27/32)   Writing objects:  87% (28/32)   Writing objects:  90% (29/32)   Writing objects:  93% (30/32)   Writing objects:  96% (31/32)   Writing objects: 100% (32/32)   Writing objects: 100% (32/32), 42.07 KiB | 7.01 MiB/s, done.
-Total 32 (delta 12), reused 0 (delta 0)
-remote: Resolving deltas:   0% (0/12)   [Kremote: Resolving deltas:  16% (2/12)   [Kremote: Resolving deltas:  25% (3/12)   [Kremote: Resolving deltas:  33% (4/12)   [Kremote: Resolving deltas:  41% (5/12)   [Kremote: Resolving deltas:  50% (6/12)   [Kremote: Resolving deltas:  58% (7/12)   [Kremote: Resolving deltas:  66% (8/12)   [Kremote: Resolving deltas:  75% (9/12)   [Kremote: Resolving deltas:  83% (10/12)   [Kremote: Resolving deltas:  91% (11/12)   [Kremote: Resolving deltas: 100% (12/12)   [Kremote: Resolving deltas: 100% (12/12), completed with 10 local objects.[K
-To https://github.com/LucyMcGowan/sgpvalue.git
-   4a21ad2..59c511d  master -> master
-]0;~/Documents/wonderland/sgpvalue
-[31;1m37% [36;1m2017-09-25 18:03:58 [0;33m [0;35mLeia🐓 [39m in [0;32m~/Documents/wonderland/sgpvalue
-[36;1m±[0;32m [0;32m|master U:1 [0;31m✗[0;32m| [0;32m→[39m ]0;~/Documents/wonderland/sgpvalue
-[31;1m37% [36;1m2017-09-25 18:03:59 [0;33m [0;35mLeia🐓 [39m in [0;32m~/Documents/wonderland/sgpvalue
-[36;1m±[0;32m [0;32m|master U:1 [0;31m✗[0;32m| [0;32m→[39m git add .
-]0;~/Documents/wonderland/sgpvalue
-[31;1m33% [36;1m2017-09-25 18:11:13 [0;33m [0;35mLeia🐓 [39m in [0;32m~/Documents/wonderland/sgpvalue
-[36;1m±[0;32m [0;32m|master S:27 [0;31m✗[0;32m| [0;32m→[39m git commit -m ":see_no_evil: Fix litt [Kle :bugs[K:s"
-[master d183e76] :see_no_evil: Fix little :bug:s
- 27 files changed, 272 insertions(+), 134 deletions(-)
- delete mode 100644 .Rproj.user/8935AAEF/sources/s-202043DD/463EAFA9
- create mode 100644 .Rproj.user/8935AAEF/sources/s-202043DD/49E09DEC
- create mode 100644 .Rproj.user/8935AAEF/sources/s-202043DD/49E09DEC-contents
- delete mode 100644 .Rproj.user/8935AAEF/sources/s-202043DD/55AD27CB
- rename .Rproj.user/8935AAEF/sources/s-202043DD/{7EA104E0 => 88F8403A} (57%)
- create mode 100644 .Rproj.user/8935AAEF/sources/s-202043DD/88F8403A-contents
- rename {sgpvalue => shiny}/app.R (100%)
-]0;~/Documents/wonderland/sgpvalue
-[31;1m32% [36;1m2017-09-25 18:11:39 [0;33m [0;35mLeia🐓 [39m in [0;32m~/Documents/wonderland/sgpvalue
-[36;1m±[0;32m [0;32m|master ↑1 U:1 [0;31m✗[0;32m| [0;32m→[39m git push
-Counting objects: 31, done.
-Delta compression using up to 8 threads.
-Compressing objects:   3% (1/30)   Compressing objects:   6% (2/30)   Compressing objects:  10% (3/30)   Compressing objects:  13% (4/30)   Compressing objects:  16% (5/30)   Compressing objects:  20% (6/30)   Compressing objects:  23% (7/30)   Compressing objects:  26% (8/30)   Compressing objects:  30% (9/30)   Compressing objects:  33% (10/30)   Compressing objects:  36% (11/30)   Compressing objects:  40% (12/30)   Compressing objects:  43% (13/30)   Compressing objects:  46% (14/30)   Compressing objects:  50% (15/30)   Compressing objects:  53% (16/30)   Compressing objects:  56% (17/30)   Compressing objects:  60% (18/30)   Compressing objects:  63% (19/30)   Compressing objects:  66% (20/30)   Compressing objects:  70% (21/30)   Compressing objects:  73% (22/30)   Compressing objects:  76% (23/30)   Compressing objects:  80% (24/30)   Compressing objects:  83% (25/30)   Compressing objects:  86% (26/30)   Compressing objects:  90% (27/30)   Compressing objects:  93% (28/30)   Compressing objects:  96% (29/30)   Compressing objects: 100% (30/30)   Compressing objects: 100% (30/30), done.
-Writing objects:   3% (1/31)   Writing objects:   6% (2/31)   Writing objects:   9% (3/31)   Writing objects:  12% (4/31)   Writing objects:  16% (5/31)   Writing objects:  19% (6/31)   Writing objects:  22% (7/31)   Writing objects:  25% (8/31)   Writing objects:  29% (9/31)   Writing objects:  32% (10/31)   Writing objects:  35% (11/31)   Writing objects:  38% (12/31)   Writing objects:  41% (13/31)   Writing objects:  45% (14/31)   Writing objects:  48% (15/31)   Writing objects:  51% (16/31)   Writing objects:  54% (17/31)   Writing objects:  58% (18/31)   Writing objects:  61% (19/31)   Writing objects:  67% (21/31)   Writing objects:  70% (22/31)   Writing objects:  74% (23/31)   Writing objects:  77% (24/31)   Writing objects:  80% (25/31)   Writing objects:  83% (26/31)   Writing objects:  87% (27/31)   Writing objects:  90% (28/31)   Writing objects:  93% (29/31)   Writing objects:  96% (30/31)   Writing objects: 100% (31/31)   Writing objects: 100% (31/31), 5.39 KiB | 98.00 KiB/s, done.
-Total 31 (delta 16), reused 0 (delta 0)
-remote: Resolving deltas:   0% (0/16)   [Kremote: Resolving deltas:   6% (1/16)   [Kremote: Resolving deltas:  12% (2/16)   [Kremote: Resolving deltas:  18% (3/16)   [Kremote: Resolving deltas:  25% (4/16)   [Kremote: Resolving deltas:  31% (5/16)   [Kremote: Resolving deltas:  37% (6/16)   [Kremote: Resolving deltas:  43% (7/16)   [Kremote: Resolving deltas:  50% (8/16)   [Kremote: Resolving deltas:  56% (9/16)   [Kremote: Resolving deltas:  62% (10/16)   [Kremote: Resolving deltas:  68% (11/16)   [Kremote: Resolving deltas:  75% (12/16)   [Kremote: Resolving deltas:  81% (13/16)   [Kremote: Resolving deltas:  87% (14/16)   [Kremote: Resolving deltas:  93% (15/16)   [Kremote: Resolving deltas: 100% (16/16)   [Kremote: Resolving deltas: 100% (16/16), completed with 14 local objects.[K
-To https://github.com/LucyMcGowan/sgpvalue.git
-   59c511d..d183e76  master -> master
-]0;~/Documents/wonderland/sgpvalue
-[31;1m32% [36;1m2017-09-25 18:11:44 [0;33m [0;35mLeia🐓 [39m in [0;32m~/Documents/wonderland/sgpvalue
-[36;1m±[0;32m [0;32m|master U:1 [0;31m✗[0;32m| [0;32m→[39m ]0;~/Documents/wonderland/sgpvalue
-[31;1m32% [36;1m2017-09-25 18:11:44 [0;33m [0;35mLeia🐓 [39m in [0;32m~/Documents/wonderland/sgpvalue
-[36;1m±[0;32m [0;32m|master U:1 [0;31m✗[0;32m| [0;32m→[39m git add .
-]0;~/Documents/wonderland/sgpvalue
-[31;1m33% [36;1m2017-09-25 18:12:49 [0;33m [0;35mLeia🐓 [39m in [0;32m~/Documents/wonderland/sgpvalue
-[36;1m±[0;32m [0;32m|master S:5 U:1 [0;31m✗[0;32m| [0;32m→[39m git commit -m "i[K:speak_no_evil:"
-[master c44ba0e] :speak_no_evil:
- 5 files changed, 54 insertions(+), 1 deletion(-)
- create mode 100644 .Rproj.user/8935AAEF/sources/s-202043DD/BC7F079F
- create mode 100644 .Rproj.user/8935AAEF/sources/s-202043DD/BC7F079F-contents
-]0;~/Documents/wonderland/sgpvalue
-[31;1m33% [36;1m2017-09-25 18:12:56 [0;33m [0;35mLeia🐓 [39m in [0;32m~/Documents/wonderland/sgpvalue
-[36;1m±[0;32m [0;32m|master ↑1 U:1 [0;31m✗[0;32m| [0;32m→[39m g[Kgit rm -r --cached
-usage: git rm [<options>] [--] <file>...
-
-    -n, --dry-run         dry run
-    -q, --quiet           do not list removed files
-    --cached              only remove from the index
-    -f, --force           override the up-to-date check
-    -r                    allow recursive removal
-    --ignore-unmatch      exit with a zero status even if nothing matched
-
-]0;~/Documents/wonderland/sgpvalue
-[31;1m32% [36;1m2017-09-25 18:14:18 [0;33m [0;35mLeia🐓 [39m in [0;32m~/Documents/wonderland/sgpvalue
-[36;1m±[0;32m [0;32m|master ↑1 U:1 [0;31m✗[0;32m| [0;32m→[39m ]0;~/Documents/wonderland/sgpvalue
-[31;1m32% [36;1m2017-09-25 18:14:21 [0;33m [0;35mLeia🐓 [39m in [0;32m~/Documents/wonderland/sgpvalue
-[36;1m±[0;32m [0;32m|master ↑1 U:1 [0;31m✗[0;32m| [0;32m→[39m git add .
-]0;~/Documents/wonderland/sgpvalue
-[31;1m32% [36;1m2017-09-25 18:14:32 [0;33m [0;35mLeia🐓 [39m in [0;32m~/Documents/wonderland/sgpvalue
-[36;1m±[0;32m [0;32m|master ↑1 S:1 U:1 [0;31m✗[0;32m| [0;32m→[39m ]0;~/Documents/wonderland/sgpvalue
-[31;1m32% [36;1m2017-09-25 18:14:35 [0;33m [0;35mLeia🐓 [39m in [0;32m~/Documents/wonderland/sgpvalue
-[36;1m±[0;32m [0;32m|master ↑1 S:1 U:1 [0;31m✗[0;32m| [0;32m→[39m git rm -r
-usage: git rm [<options>] [--] <file>...
-
-    -n, --dry-run         dry run
-    -q, --quiet           do not list removed files
-    --cached              only remove from the index
-    -f, --force           override the up-to-date check
-    -r                    allow recursive removal
-    --ignore-unmatch      exit with a zero status even if nothing matched
-
-]0;~/Documents/wonderland/sgpvalue
-[31;1m32% [36;1m2017-09-25 18:14:46 [0;33m [0;35mLeia🐓 [39m in [0;32m~/Documents/wonderland/sgpvalue
-[36;1m±[0;32m [0;32m|master ↑1 S:1 U:1 [0;31m✗[0;32m| [0;32m→[39m git -rm[K[K[Krm -r --cached *.Rproj
-rm 'sgpvalue.Rproj'
-]0;~/Documents/wonderland/sgpvalue
-[31;1m32% [36;1m2017-09-25 18:14:55 [0;33m [0;35mLeia🐓 [39m in [0;32m~/Documents/wonderland/sgpvalue
-[36;1m±[0;32m [0;32m|master ↑1 S:2 U:1 [0;31m✗[0;32m| [0;32m→[39m ]0;~/Documents/wonderland/sgpvalue
-[31;1m32% [36;1m2017-09-25 18:14:58 [0;33m [0;35mLeia🐓 [39m in [0;32m~/Documents/wonderland/sgpvalue
-[36;1m±[0;32m [0;32m|master ↑1 S:2 U:1 [0;31m✗[0;32m| [0;32m→[39m git add.[K .
