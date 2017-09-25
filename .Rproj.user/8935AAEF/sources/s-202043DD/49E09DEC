@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1506380877438.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "49E09DEC",
+    "lastKnownWriteTime" : 1506381037,
+    "last_content_update" : 1506381037431,
+    "path" : "~/Documents/wonderland/sgpvalue/R/p_delta.R",
+    "project_path" : "R/p_delta.R",
+    "properties" : {
+        "cursorPosition" : "13,10",
+        "scrollLine" : "5",
+        "tempName" : "Untitled2"
+    },
+    "relative_order" : 7,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

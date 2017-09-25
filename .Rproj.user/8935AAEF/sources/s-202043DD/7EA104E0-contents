@@ -52,7 +52,7 @@ compare_p <- function(data, delta_a, delta_b, h0, plot = TRUE) {
   )
 
   if (plot) {
-    plot(c(data$xbar, NA),
+    graphics::plot(c(data$xbar, NA),
          1:(length(data$xbar) + 1),
          xlim = c(min(data$lb) - 2, max(data$ub, delta_b)),
          xaxt = "n",
@@ -60,20 +60,20 @@ compare_p <- function(data, delta_a, delta_b, h0, plot = TRUE) {
          ylab = "",
          xlab = "",
          type = "n")
-    axis(side = 1,
+    graphics::axis(side = 1,
          at = seq(round(min(data$lb, delta_a)),
                   round(max(data$ub, delta_b)),
                   delta_b - h0)
     )
 
-    rect(delta_a,
+    graphics::rect(delta_a,
          length(data$xbar) + 1,
          delta_b,
          0,
-         col = rgb(208, 216, 232, max = 255),
+         col = grDevices::rgb(208, 216, 232, max = 255),
          border = NA)
 
-    abline(v = h0,
+    graphics::abline(v = h0,
            lty = 2,
            lwd = 2,
            col = "black")
@@ -81,9 +81,9 @@ compare_p <- function(data, delta_a, delta_b, h0, plot = TRUE) {
     steps = seq(nrow(data), 1)
     study_name <- paste("Study", steps)
     for  (i in steps){
-      points(data$xbar[i], nrow(data) - i + 1, pch=16)
-      lines(c(data$lb[i], data$ub[i]), c(nrow(data) - i + 1, nrow(data) - i + 1), lwd = 1.5)
-      text(min(data$lb) - 1.2, i, study_name[i], font = 2)
+      graphics::points(data$xbar[i], nrow(data) - i + 1, pch=16)
+      graphics::lines(c(data$lb[i], data$ub[i]), c(nrow(data) - i + 1, nrow(data) - i + 1), lwd = 1.5)
+      graphics::text(min(data$lb) - 1.2, i, study_name[i], font = 2)
     }
   }
   data.frame(xbar = data$xbar,

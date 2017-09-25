@@ -24,5 +24,5 @@ Second Generation P-value
 \examples{
 ## Second Generation P-value for a confidence interval of (140, 145) and an
 ## indifference zone of (144, 148)
-second_gen_pvalue(140, 145, 144, 148)
+p_delta(140, 145, 144, 148)
 }
