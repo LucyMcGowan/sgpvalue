@@ -5,3 +5,105 @@ Initialized empty Git repository in /Users/lucymcgowan/Documents/wonderland/sgpv
 ]0;~/Documents/wonderland/sgpvalue
 [31;1m46% [36;1m2017-09-25 17:42:23 [0;33m [0;35mLeia🐓 [39m in [0;32m~/Documents/wonderland/sgpvalue
 [36;1m±[0;32m [0;32m|master ?:22 [0;31m✗[0;32m| [0;32m→[39m git add .
+]0;~/Documents/wonderland/sgpvalue
+[31;1m46% [36;1m2017-09-25 17:42:25 [0;33m [0;35mLeia🐓 [39m in [0;32m~/Documents/wonderland/sgpvalue
+[36;1m±[0;32m [0;32m|master S:92 [0;31m✗[0;32m| [0;32m→[39m git commit -m ":d[Ktada: First com mit"
+[master (root-commit) d30d928] :tada: First commit
+ 92 files changed, 1899 insertions(+)
+ create mode 100644 .Rbuildignore
+ create mode 100644 .Rproj.user/8935AAEF/console06/BAA5CED
+ create mode 100644 .Rproj.user/8935AAEF/console06/INDEX001
+ create mode 100644 .Rproj.user/8935AAEF/cpp-definition-cache
+ create mode 100644 .Rproj.user/8935AAEF/pcs/files-pane.pper
+ create mode 100644 .Rproj.user/8935AAEF/pcs/source-pane.pper
+ create mode 100644 .Rproj.user/8935AAEF/pcs/windowlayoutstate.pper
+ create mode 100644 .Rproj.user/8935AAEF/pcs/workbench-pane.pper
+ create mode 100644 .Rproj.user/8935AAEF/persistent-state
+ create mode 100644 .Rproj.user/8935AAEF/rmd-outputs
+ create mode 100644 .Rproj.user/8935AAEF/saved_source_markers
+ create mode 100644 .Rproj.user/8935AAEF/sources/prop/13BE3DB
+ create mode 100644 .Rproj.user/8935AAEF/sources/prop/1BBC2FBB
+ create mode 100644 .Rproj.user/8935AAEF/sources/prop/21E114C2
+ create mode 100644 .Rproj.user/8935AAEF/sources/prop/5E9BD6C6
+ create mode 100644 .Rproj.user/8935AAEF/sources/prop/6CD23334
+ create mode 100644 .Rproj.user/8935AAEF/sources/prop/9C6C18B7
+ create mode 100644 .Rproj.user/8935AAEF/sources/prop/A45CFC38
+ create mode 100644 .Rproj.user/8935AAEF/sources/prop/AF4D0A75
+ create mode 100644 .Rproj.user/8935AAEF/sources/prop/CBD93BA8
+ create mode 100644 .Rproj.user/8935AAEF/sources/prop/D86E3689
+ create mode 100644 .Rproj.user/8935AAEF/sources/prop/E506EB9D
+ create mode 100644 .Rproj.user/8935AAEF/sources/prop/EF8901C8
+ create mode 100644 .Rproj.user/8935AAEF/sources/prop/INDEX
+ create mode 100644 .Rproj.user/8935AAEF/sources/s-202043DD/20EBA25
+ create mode 100644 .Rproj.user/8935AAEF/sources/s-202043DD/20EBA25-contents
+ create mode 100644 .Rproj.user/8935AAEF/sources/s-202043DD/22E34997-contents
+ create mode 100644 .Rproj.user/8935AAEF/sources/s-202043DD/2C58F7A4-contents
+ create mode 100644 .Rproj.user/8935AAEF/sources/s-202043DD/2C5E3018-contents
+ create mode 100644 .Rproj.user/8935AAEF/sources/s-202043DD/30C4AAB4-contents
+ create mode 100644 .Rproj.user/8935AAEF/sources/s-202043DD/35DE35EB-contents
+ create mode 100644 .Rproj.user/8935AAEF/sources/s-202043DD/3694B0AE-contents
+ create mode 100644 .Rproj.user/8935AAEF/sources/s-202043DD/3AF180CE
+ create mode 100644 .Rproj.user/8935AAEF/sources/s-202043DD/3AF180CE-contents
+ create mode 100644 .Rproj.user/8935AAEF/sources/s-202043DD/3E844FC0-contents
+ create mode 100644 .Rproj.user/8935AAEF/sources/s-202043DD/42980403-contents
+ create mode 100644 .Rproj.user/8935AAEF/sources/s-202043DD/463EAFA9
+ create mode 100644 .Rproj.user/8935AAEF/sources/s-202043DD/463EAFA9-contents
+ create mode 100644 .Rproj.user/8935AAEF/sources/s-202043DD/4B023567-contents
+ create mode 100644 .Rproj.user/8935AAEF/sources/s-202043DD/51E78A5F-contents
+ create mode 100644 .Rproj.user/8935AAEF/sources/s-202043DD/55AD27CB
+ create mode 100644 .Rproj.user/8935AAEF/sources/s-202043DD/55AD27CB-contents
+ create mode 100644 .Rproj.user/8935AAEF/sources/s-202043DD/592A75E8-contents
+ create mode 100644 .Rproj.user/8935AAEF/sources/s-202043DD/7EA104E0
+ create mode 100644 .Rproj.user/8935AAEF/sources/s-202043DD/7EA104E0-contents
+ create mode 100644 .Rproj.user/8935AAEF/sources/s-202043DD/B84722F-contents
+ create mode 100644 .Rproj.user/8935AAEF/sources/s-202043DD/C688D6D6-contents
+ create mode 100644 .Rproj.user/8935AAEF/sources/s-202043DD/C8571F4F-contents
+ create mode 100644 .Rproj.user/8935AAEF/sources/s-202043DD/CEF49017-contents
+ create mode 100644 .Rproj.user/8935AAEF/sources/s-202043DD/CFF28412-contents
+ create mode 100644 .Rproj.user/8935AAEF/sources/s-202043DD/E6662E47-contents
+ create mode 100644 .Rproj.user/8935AAEF/sources/s-202043DD/ED102429
+ create mode 100644 .Rproj.user/8935AAEF/sources/s-202043DD/ED102429-contents
+ create mode 100644 .Rproj.user/8935AAEF/sources/s-202043DD/F5B88880-contents
+ create mode 100644 .Rproj.user/8935AAEF/sources/s-202043DD/F72C2A47-contents
+ create mode 100644 .Rproj.user/8935AAEF/sources/s-202043DD/lock_file
+ create mode 100644 .Rproj.user/shared/notebooks/9FDFE5D8-README/1/8935AAEF202043DD/chunks.json
+ create mode 100644 .Rproj.user/shared/notebooks/9FDFE5D8-README/1/s/c3tes8u76amlx/000002.csv
+ create mode 100644 .Rproj.user/shared/notebooks/9FDFE5D8-README/1/s/c3tes8u76amlx/000003.metadata
+ create mode 100644 .Rproj.user/shared/notebooks/9FDFE5D8-README/1/s/c3tes8u76amlx/000003.rdf
+ create mode 100644 .Rproj.user/shared/notebooks/9FDFE5D8-README/1/s/c3tes8u76amlx/000004.metadata
+ create mode 100644 .Rproj.user/shared/notebooks/9FDFE5D8-README/1/s/c3tes8u76amlx/000004.png
+ create mode 100644 .Rproj.user/shared/notebooks/9FDFE5D8-README/1/s/c3tes8u76amlx/000004.snapshot
+ create mode 100644 .Rproj.user/shared/notebooks/9FDFE5D8-README/1/s/chunks.json
+ create mode 100644 .Rproj.user/shared/notebooks/9FDFE5D8-README/1/s/cx76pfurleg3u/000002.csv
+ create mode 100644 .Rproj.user/shared/notebooks/patch-chunk-names
+ create mode 100644 .Rproj.user/shared/notebooks/paths
+ create mode 100644 DESCRIPTION
+ create mode 100644 LICENSE
+ create mode 100644 NAMESPACE
+ create mode 100644 R/compare_p.R
+ create mode 100644 R/p_delta.R
+ create mode 100644 R/power_curves.R
+ create mode 100644 README-fig_2-1.png
+ create mode 100644 README-fig_s3-1.png
+ create mode 100644 README-fig_s5-1.png
+ create mode 100644 README-fig_s5-2.png
+ create mode 100644 README-fig_s6-1.png
+ create mode 100644 README-fig_s6-2.png
+ create mode 100644 README-unnamed-chunk-3-1.png
+ create mode 100644 README-unnamed-chunk-4-1.png
+ create mode 100644 README-unnamed-chunk-5-1.png
+ create mode 100644 README-unnamed-chunk-5-2.png
+ create mode 100644 README-unnamed-chunk-6-1.png
+ create mode 100644 README-unnamed-chunk-6-2.png
+ create mode 100644 README.Rmd
+ create mode 100644 README.md
+ create mode 100644 man/compare_p.Rd
+ create mode 100644 man/hello.Rd
+ create mode 100644 man/p_delta.Rd
+ create mode 100644 man/power_curves.Rd
+ create mode 100644 sgpvalue.Rproj
+]0;~/Documents/wonderland/sgpvalue
+[31;1m46% [36;1m2017-09-25 17:42:34 [0;33m [0;35mLeia🐓 [39m in [0;32m~/Documents/wonderland/sgpvalue
+[36;1m±[0;32m [0;32m|master U:1 [0;31m✗[0;32m| [0;32m→[39m ]0;~/Documents/wonderland/sgpvalue
+[31;1m46% [36;1m2017-09-25 17:42:37 [0;33m [0;35mLeia🐓 [39m in [0;32m~/Documents/wonderland/sgpvalue
+[36;1m±[0;32m [0;32m|master U:1 [0;31m✗[0;32m| [0;32m→[39m git add .
