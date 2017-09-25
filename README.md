@@ -8,12 +8,8 @@ Installation
 ------------
 
 ``` r
-## install.packages("devtools")
+# install.packages("devtools")
 devtools::install_github("LucyMcGowan/sgpvalue")
-#> Using GitHub PAT from envvar GITHUB_PAT
-#> Downloading GitHub repo LucyMcGowan/sgpvalue@master
-#> from URL https://api.github.com/repos/LucyMcGowan/sgpvalue/zipball/master
-#> Installation failed: Not Found (404)
 ```
 
 Example

@@ -20,8 +20,8 @@ The goal of sgpvalue is to help bring clarity to the Second Generation P-value p
 
 ## Installation
 
-```{r}
-## install.packages("devtools")
+```{r, eval = FALSE}
+# install.packages("devtools")
 devtools::install_github("LucyMcGowan/sgpvalue")
 ```
 

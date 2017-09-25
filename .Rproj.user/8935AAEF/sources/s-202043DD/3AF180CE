@@ -5,15 +5,15 @@
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "90600397",
+    "hash" : "0",
     "id" : "3AF180CE",
-    "lastKnownWriteTime" : 1506379298,
-    "last_content_update" : 1506379298216,
+    "lastKnownWriteTime" : 1506379482,
+    "last_content_update" : 1506379482539,
     "path" : "~/Documents/wonderland/sgpvalue/README.Rmd",
     "project_path" : "README.Rmd",
     "properties" : {
-        "cursorPosition" : "40,11",
-        "scrollLine" : "28"
+        "cursorPosition" : "26,0",
+        "scrollLine" : "18"
     },
     "relative_order" : 7,
     "source_on_save" : false,
