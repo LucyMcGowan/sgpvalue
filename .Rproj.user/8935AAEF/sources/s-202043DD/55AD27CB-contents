@@ -1,0 +1,89 @@
+data <- tibble::tibble(
+  x_bar = c(141, 142, 143.5, 144, 146, 145, 145.5, 146),
+  se = c(.5, 1, .5, 1, 2.25, 1.25, .25, .5),
+)
+
+data$lb <- data$x_bar - 1.96 * data$se
+data$ub <- data$x_bar + 1.96 * data$se
+
+delta_a <- 144
+delta_b <- 145
+h0 <- 145
+
+
+
+p.plotseq2 <- function(xbar,
+                       se,
+                       delta.a,
+                       delta.b,
+                       h0,
+                       side = "right",
+                       upto = "NA",
+                       id.color = rgb(1, 0.9, 1, 0.6)
+){
+  if (upto=="NA") {upto = length(xbar)}
+  lb <- xbar - 1.96 * se
+  ub <- xbar + 1.96 * se
+  z1 <- (xbar - h0) / se
+  p1 <- round(2 * pnorm(- abs(z1)), 5)
+  z2 <- ifelse(abs(xbar - delta.b) < abs(xbar-delta.a),
+               (xbar - delta.b) / se,
+               (xbar - delta.a) / se)
+  z2 <- ifelse(xbar > delta.b | delta.a > xbar,
+               z2,
+               0)
+  p2 <- round(2 * pnorm(- abs(z2)), 5)
+  p3 <- correction <- NULL
+  for (i in 1:length(xbar)){
+    p3[i]<-ifelse((lb[i] <delta.b & ub[i]>delta.b )|(lb[i] < delta.a & ub[i] > delta.a),min((delta.b-lb[i])/(ub[i]-lb[i]),(delta.b-delta.a)/(ub[i]-lb[i]),(ub[i]-delta.a)/(ub[i]-lb[i])),1)
+    #emphasis on null hypothesis adjustment
+    correction[i]<-max((ub[i]-lb[i])/(2*(delta.b-delta.a)),1)
+  }
+  p3<-ifelse(lb>delta.b,0,p3)
+  p3<-ifelse(ub< delta.a,0,p3)
+  p4<-ifelse(p3 != 0 & p3 != 1,p3*p2,p3)
+  p5<-p3*correction
+  
+  if (side=='right'){
+    plot(c(xbar,NA),1:(length(xbar)+1),xlim=c(min(lb,delta.a),max(ub)+5),xaxt='n',yaxt='n',ylab="",xlab="",type="n")
+    rect(delta.a,length(xbar)+1,delta.b,0,col=rgb(1,0.9,1,0.6),border=NA)
+    abline(v=h0,lty=2,lwd=2,col='black')
+    points(c(xbar,NA),1:(length(xbar)+1))
+    
+    for  (i in 1:upto){
+      lines(c(lb[i],ub[i]),c(i,i))
+    }
+    
+    text(max(ub)+.5,1:(length(xbar)+1),c(round(p5,4),"A better P-value"))
+    #text(max(ub)+.5,1:(length(xbar)+1),c(round(p4,4),"Proportion*Max P-value"))
+    #text(max(ub)+2,1:(length(xbar)+1),c(round(p3,4),"Proportion in Null"))
+    text(max(ub)+2.5,1:(length(xbar)+1),c(round(p2,4),"Max P-value"))
+    text(max(ub)+4.5,1:(length(xbar)+1),c(round(p1,4),"Traditional P-value"))
+    axis(side = 1,at=seq(round(min(lb)),round(max(ub)),delta.b-h0))
+  }
+  if (side=='left'){
+    plot(c(xbar,NA),1:(length(xbar)+1),xlim=c(min(lb)-2,max(ub,delta.b)),xaxt='n',yaxt='n',ylab="",xlab="",type="n")
+    axis(side = 1,at=seq(round(min(lb,delta.a)),round(max(ub,delta.b)),delta.b-h0))
+    rect(delta.a,length(xbar)+1,delta.b,0,col=id.color,border=NA)
+    abline(v=h0,lty=2,lwd=2,col='black')
+    
+    #text(min(lb)-c(4.5,2.5,0.5),length(xbar)+1,c("2nd-Gen P","Max P","1st-Gen P"),font=2)  	#expression(P[delta])
+    
+    steps=seq(8,(8-upto+1),-1)
+    for  (i in steps){
+      points(xbar[i],i,pch=16)
+      lines(c(lb[i],ub[i]),c(i,i),lwd=1.5)
+      text(min(lb)-1.2,i,c("Study 8","Study 7","Study 6","Study 5","Study 4","Study 3","Study 2","Study 1")[i],font=2)
+      #text(min(lb)-4.5,i,round(p5,4)[i])
+      #text(min(lb)-2.5,i,round(p2,4)[i])
+      #text(min(lb)-0.5,i,ifelse(round(p1[i],4)>0.0001 |round(p1[i],4)==0,round(p1[i],4),"<0.0001"))
+    }
+    
+    #text(min(lb)-6.5,1:upto,c("Study 8","Study 7","Study 6","Study 5","Study 4","Study 3","Study 2","Study 1"),font=2)
+    #text(min(lb)-4.5,1:upto,round(p5,4))
+    #text(min(lb)-2.5,1:upto,round(p2,4))
+    #text(min(lb)-0.5,1:upto,ifelse(round(p1,4)>0.0001 |round(p1,4)==0,round(p1,4),"<0.0001"))
+    
+  }
+  return(cbind(lb,ub))
+}

@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1506378701601.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "90600397",
+    "id" : "3AF180CE",
+    "lastKnownWriteTime" : 1506379298,
+    "last_content_update" : 1506379298216,
+    "path" : "~/Documents/wonderland/sgpvalue/README.Rmd",
+    "project_path" : "README.Rmd",
+    "properties" : {
+        "cursorPosition" : "40,11",
+        "scrollLine" : "28"
+    },
+    "relative_order" : 7,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

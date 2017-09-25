@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1506376364366.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "20EBA25",
+    "lastKnownWriteTime" : 1506378116,
+    "last_content_update" : 1506378116199,
+    "path" : "~/Documents/wonderland/sgpvalue/R/power_curves.R",
+    "project_path" : "R/power_curves.R",
+    "properties" : {
+        "cursorPosition" : "36,76",
+        "scrollLine" : "30",
+        "tempName" : "Untitled2"
+    },
+    "relative_order" : 9,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

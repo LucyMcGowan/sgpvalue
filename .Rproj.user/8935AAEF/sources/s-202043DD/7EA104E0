@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1506370735843.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "7EA104E0",
+    "lastKnownWriteTime" : 1506373216,
+    "last_content_update" : 1506373216393,
+    "path" : "~/Documents/wonderland/sgpvalue/R/compare_p.R",
+    "project_path" : "R/compare_p.R",
+    "properties" : {
+        "cursorPosition" : "24,0",
+        "scrollLine" : "19",
+        "tempName" : "Untitled2"
+    },
+    "relative_order" : 6,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

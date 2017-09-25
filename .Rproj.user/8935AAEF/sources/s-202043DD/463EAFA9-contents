@@ -1,0 +1,386 @@
+################################################
+##	Code for 'Second Generation p-value' paper
+##  December 20, 2016
+## 	Last revised by JDB: 4/12/17
+##  Authors: JDB and LDM
+#################################################
+
+################################################
+#### Set Data and Function Directories
+
+datadir='~/Dropbox/Shared/SecondGenPvalues/Data'
+fundir='~/Dropbox/Shared/SecondGenPvalues/Functions'
+
+################################################
+#### Simple Example with CIs (Figure 1)
+
+## Done in PPT/Word
+
+### Figure 2
+source(file.path(fundir,"pplotseq2.R"))
+
+p.plotseq2(xbar=c(141,142,143.5,144,146,145,145.5,146),
+           se=c(.5,1,.5,1,2.25,1.25,.25,.5),
+           delta.a=144,delta.b=148,h0=146,
+           'left',upto=8,id.color=rgb(208,216,232,max=255))
+axis(side=1,at=seq(144,148,2))	# to re-draw axis 
+mtext(side=1,"Systolic blood pressure (mmHg)",line=2.5)
+
+################################################
+#### Leukemia Example 
+
+#### Figures 3 & 4
+
+load(file.path(datadir,"leukdata.Rda"))
+source(file.path(fundir,"leukexample2.R"))
+
+dim(leukdata)
+rep=dim(leukdata)[[1]]
+gene=seq(1,rep,1)
+
+## T-statistics
+t.list=apply(leukdata,1,function(x){t.test(x[48:72],x[1:47],var.equal=TRUE)$statistic})
+t.pv=apply(leukdata,1,function(x){t.test(x[48:72],x[1:47],var.equal=TRUE)$p.value})  
+t.cil=apply(leukdata,1,function(x){t.test(x[48:72],x[1:47],var.equal=TRUE)$conf.int[1]}) 
+t.ciu=apply(leukdata,1,function(x){t.test(x[48:72],x[1:47],var.equal=TRUE)$conf.int[2]})
+m.diff=rowMeans(leukdata[,48:72])-rowMeans(leukdata[,1:47])
+
+
+## Tail Area probabilities
+pv=sort(2*(1-pt(abs(t.list),df=70)))
+ord=order(2*(1-pt(abs(t.list),df=70)))
+pv.bon=pmin(length(pv)*pv,1)
+pv.bh=length(pv)*pv/seq(1:length(pv))
+
+##
+all=data.frame(id=seq(1:7128),t.list,t.pv,t.cil,t.ciu,pv.bon,pv.bh,
+			rank=rank(-abs(t.list)))
+all[all$rank==1,]
+
+## Figure 3
+ciplot.lrg(-.3,.3)
+
+## Figure 4
+ciplot(-.3,.3)
+
+ex.col=c("slateblue4")
+segments(180, t.ciu[350], 180, t.cil[350],lty=1,col=ex.col,lwd=2) 
+points(180,t.ciu[350]-0.01,cex=0.6,pch=16,col=ex.col)
+points(180,t.cil[350],cex=0.6,pch=16,col=ex.col)
+
+ex.col2=c("chartreuse4")
+segments(4, t.ciu[2288], 4, t.cil[2288],lty=1,col=ex.col2,lwd=2) 
+points(4,t.ciu[2288]-0.01,cex=0.6,pch=16,col=ex.col2)
+points(4,t.cil[2288],cex=0.6,pch=16,col=ex.col2)
+
+ex.col3=c("cyan")
+segments(1, t.ciu[3252],1, t.cil[3252],lty=1,col=ex.col3,lwd=2) 
+points(1,t.ciu[3252]-0.01,cex=0.6,pch=16,col=ex.col3)
+points(1,t.cil[3252],cex=0.6,pch=16,col=ex.col3)
+
+legend('topright',c("gene 3252 (    #1)","gene 2288 (    #4)","gene   350 (#180)"),
+		col=c(ex.col3,ex.col2,ex.col),lty=1,lwd=1.5,bty="n")
+
+#### Tables and quotes statistics
+##table 2
+comp.tab(-.3,.3)
+comp.tab(log(1/2,base=10),log(2,base=10))
+comp.tab(log(1/1.92,base=10),log(1.92,base=10))
+
+## example intervals
+t.cil[ord][966]>0.3
+10^t.cil[ord][966]
+10^t.ciu[ord][966]
+t.pv[ord][966]
+ord[966]
+
+which.min(abs(t.cil[ord][1:264]))
+10^t.ciu[ord][180]
+10^t.cil[ord][180]
+t.pv[ord][180]
+ord[180]
+
+## largest delta gap
+10^t.cil[2288]
+10^t.ciu[2288]
+which.max((t.cil[ord][1:264]))   # gene #4  == ord[4]=2288
+which.max(t.ciu[ord])
+c(t.cil[2288],t.ciu[2288])
+10^c(t.cil[2288],t.ciu[2288])
+
+segments(4, t.ciu[2288], 4, t.cil[2288],lty=1,col='firebrick4',lwd=2) 
+points(4,t.ciu[2288]-0.01,cex=0.6,pch=16,col='firebrick4')
+points(4,t.cil[2288],cex=0.6,pch=16,col='firebrick4')
+
+## largest delta gap
+c(10^t.cil[2288],10^t.ciu[2288])
+c(t.cil[2288],t.ciu[2288])
+which.max((t.cil[ord][1:264]))   # gene #4  == ord[4]=228
+
+# delta-gap of most significant gene
+c(10^t.cil[3252],10^t.ciu[3252])
+c(t.cil[3252],t.ciu[3252])
+which.max(abs(t.list))==3252
+which.min(t.pv)==3252  # gene 3252
+
+segments(1, t.ciu[3252], 1, t.cil[3252],lty=1,col='firebrick4',lwd=2) 
+points(1,t.ciu[3252]-0.01,cex=0.6,pch=16,col='firebrick4')
+points(1,t.cil[3252],cex=0.6,pch=16,col='firebrick4')
+
+sum(pmax(pmax((t.cil-0.3)/0.3,0),pmax((-t.ciu-0.3)/0.3,0))!=0)
+hist(pmax(pmax((t.cil-0.3)/0.3,0),pmax((-t.ciu-0.3)/0.3,0)))
+quantile(pmax(pmax((t.cil-0.3)/0.3,0),pmax((-t.ciu-0.3)/0.3,0)))
+
+stem(pmax(pmax((t.cil-0.3)/0.3,0),pmax((-t.ciu-0.3)/0.3,0)))
+
+## log scale
+((t.cil[2288]-0.3)/0.3)
+((t.cil[3252]-0.3)/0.3)
+((t.ciu[760]-0.3)/0.3)
+
+## Sarah's find is 6378
+t.list[6378]
+t.pv[6378]
+10^c(t.cil[6378],t.ciu[6378])
+((t.cil[6378]-0.3)/0.3)
+((t.ciu[6378]-0.3)/0.3)
+
+length(t.cil)-which(sort((pmax(pmax((t.cil-0.3)/0.3,0),
+						pmax((-t.ciu-0.3)/0.3,0))))==((t.cil[6378]-0.3)/0.3))+1
+
+((t.cil[6378]-0.3)/0.3)  #5 fifth smallest second-gen p-value
+
+dgap=(pmax(pmax((t.cil-0.3)/0.3,0),pmax((-t.ciu-0.3)/0.3,0)))
+dgap[6378]
+
+which(dgap>=3.3)  ## > which(dgap>=3.3)
+## [1] 1882 2288 2335 4680 6378
+
+me=which(dgap>=3.3)
+dgap[ord=me]
+
+## Top five delta-gap genes
+cbind(dgap,ord,rank(t.pv))[me,]
+
+
+
+all[rank,][1:15,]
+
+all=data.frame(id=seq(1:7128),ord1=order(-abs(t.list)), ord2=order(-dgap),
+				t.list,t.pv,t.cil,t.ciu,pv.bon,pv.bh,dgap,
+				rank1=rank(-abs(t.list)),rank2=rank(-dgap))
+all[all$ord1,][1:20,]
+all[all$ord2,][1:20,]
+
+all[all$id==6201,]
+
+plot(all$rank1,all$rank2,ylim=c(0,300))
+abline(0,1)
+
+## Ranking is unique no ties: any(duplicated((-abs(t.list))))
+################################################
+#### Survival Example
+
+## Figure 5
+
+## See file "Survival with pdelta.R"
+
+
+
+#### Supplement 
+## 4x4 plot of p-values (Figure 2)
+## pcompareplot2(-.3,.3)
+par(mfrow=c(2,2))
+pcompareplot(-.3,.3)
+pcompareplot(-.1,.1)
+pcompareplot(-.05,.05)
+pcompareplot(-.000001,.000001)
+
+par(mfrow=c(1,1))
+pcompareplot(-.1,.1)
+
+################################################
+#### Operational Characteristics
+
+##Figure 4
+source(file.path(fundir,"operatingchars.R"))
+
+pwr.alt(n=10,delta.vec=c(0,1/30,1/2,1),truth="null")
+legend(2,0.95,c("Delta","  0","~0","0.5","  1"),
+	col=c(NA,"black","orange","green","blue"),lty=c(NA,1,1,1,1),lwd=c(NA,2,2,2,2),bty="n")
+	text(-2.5,0.075,"Alpha = 0.05")
+#text(2.5,0.7,"N Small")
+
+pwr.alt(n=400,delta.vec=c(0,1/30,1/2,1),truth="null")
+legend(1.7,0.95,c("Delta","  0","~0","0.5","  1"),
+	col=c(NA,"black","orange","green","blue"),lty=c(NA,1,1,1,1),lwd=c(NA,2,2,2,2),bty="n")
+	text(-2.5,0.075,"Alpha = 0.05")
+	
+##Figure 5
+pwr.alt(n=40,delta.vec=c(0,1/30,1/2,1),truth="alternative")
+legend(2,0.95,c("Delta","  0","~0","0.5","  1"),
+	col=c(NA,"black","orange","green","blue"),lty=c(NA,1,1,1,1),lwd=c(NA,2,2,2,2),bty="n")
+	text(-2.5,0.075,"Alpha = 0.05")
+	abline(h=0.05,lty=2)
+	
+pwr.alt(n=200,delta.vec=c(0,1/30,1/2,1),truth="alternative")
+legend(2,0.95,c("Delta","  0","~0","0.5","  1"),
+	col=c(NA,"black","orange","green","blue"),lty=c(NA,1,1,1,1),lwd=c(NA,2,2,2,2),bty="n")
+	text(-2.5,0.075,"Alpha = 0.05")
+	abline(h=0.05,lty=2)
+	
+##Figure 6
+pwr.alt(n=20,delta.vec=c(0.008,1/30,1/2,1),truth="inconclusive",id.col=rgb(208,216,232,max=255))
+pwr.alt(n=200,delta.vec=c(0.008,1/30,1/2,1),truth="inconclusive",id.col=rgb(208,216,232,max=255))
+dev.off()
+
+##Figure 7
+source(file.path(fundir,"powercomp.R"))
+
+power.comp(delta=.3,k=10)
+text(-2.5,0.075,"Alpha")
+mtext("10 Comparisons ; Delta = 0.3",side=3,line=0.5,font=2,cex=1.2)
+
+power.comp(delta=.3,k=100)
+text(-2.5,0.075,"Alpha")
+mtext("100 Comparisons ; Delta = 0.3",side=3,line=0.5,font=2,cex=1.2)
+
+power.comp(delta=.3,k=7128)
+text(-2.5,0.075,"Alpha")
+mtext("7128 Comparisons ; Delta = 0.3",side=3,line=0.5,font=2,cex=1.2)
+
+### CI demo
+### Standardized effect size
+source(file.path(fundir,"cidemo-v3.R"))
+
+cidemo(idz.lo=0,idz.hi=0,sigma=1,n=6,hilim=-3,lolim=3,lcol=1)
+cidemo(idz.lo=0,idz.hi=0,sigma=1,n=60,hilim=-3,lolim=3)
+cidemo(idz.lo=0,idz.hi=0,sigma=1,n=60,hilim=-3,lolim=3,rep=1000)
+
+cidemo(idz.lo=-0.3,idz.hi=0.3,sigma=1,n=6,hilim=-3,lolim=3,lcol=1)
+cidemo(idz.lo=-0.3,idz.hi=0.3,sigma=1,n=60,hilim=-3,lolim=3)
+cidemo(idz.lo=-0.3,idz.hi=0.3,sigma=1,n=60,hilim=-3,lolim=3,rep=1000)
+
+
+################################################
+#### Operational Characteristics
+
+## Survival Analysis
+# http://www.statsdirect.com/help/survival_analysis/logrank.htm
+# http://www.sthda.com/english/rpkgs/survminer/ggsurvplot.html
+# http://stackoverflow.com/questions/9151591/how-to-plot-the-survival-curve-generated-by-survreg-package-survival-of-r
+# https://rstudio-pubs-static.s3.amazonaws.com/5588_72eb65bfbe0a4cb7b655d2eee0751584.html
+## use lung data set in R
+
+require("survival")
+fit<- survfit(Surv(time, status) ~ sex, data = lung)
+plot(fit,col=c("red","blue"))
+summary(fit)
+objects(fit)
+summary(fit)$surv
+
+newdata=lung$sex
+predict(fit,newdata=list(sex=1:2),type='quantile',p=c(0.1,0.5,0.9))
+
+##
+
+lung.Surv <- with(lung, Surv(time=time, event=status))
+lung.survfit <- survfit(lung.Surv ~ lung$sex)
+plot(lung.survfit,col=c("white","white"),mark.time=F) ## sex=1 is red
+
+sCox <- coxph(lung.Surv ~ as.factor(sex),data=lung)
+plot(sCox,col=c("red","blue"),type="n")
+lines(survfit(sCox,newdata=data.frame(sex=1),mark.time=F),col='red') ##
+lines(survfit(sCox,newdata=data.frame(sex=2)),col='blue') ##
+
+pred.1=summary(survfit(sCox,newdata=data.frame(sex=1)))$surv
+pred.2=summary(survfit(sCox,newdata=data.frame(sex=2)))$surv
+pred.diff=pred.2-pred.1
+time.diff=summary(survfit(sCox,newdata=data.frame(sex=1)))$time
+v.1=summary(survfit(sCox,newdata=data.frame(sex=1)))$std.err^2
+v.2=summary(survfit(sCox,newdata=data.frame(sex=2)))$std.err^2
+se.diff=sqrt(v.1+v.2)
+
+lb=pred.diff-1.96*se.diff
+ub=pred.diff+1.96*se.diff
+
+
+#####
+#pdelta function
+
+pdelta<-function(cil, ciu, delta.l,delta.u){
+p<-correction<-NULL
+for (i in 1:length(cil)){
+  p[i]<-ifelse((cil[i] <delta.u & ciu[i]>delta.u )|(cil[i] < delta.l & ciu[i] > delta.l),min((delta.u-cil[i])/(ciu[i]-cil[i]),(delta.u-delta.l)/(ciu[i]-cil[i]),(ciu[i]-delta.l)/(ciu[i]-cil[i])),1)
+  #emphasis on null hypothesis adjustment
+  correction[i]<-max((ciu[i]-cil[i])/(2*(delta.u-delta.l)),1)
+}
+p<-ifelse(cil>delta.u,0,p)
+p<-ifelse(ciu< delta.l,0,p)
+pdelta <- round(p*correction,3)
+  return(pdelta)
+}
+
+#calculate pdelta
+pdelt <- pdelta(lb,ub,-0.05,0.05)
+#average pdelta
+mean(pdelt)
+
+#colors
+colfunc <- colorRampPalette(c("grey90", "gray44"))
+COL <- ifelse(pdelt == 0,"#00ea6e",
+              ifelse(pdelt == 1, "#ff0000",
+                     colfunc(length(unique(pdelt[!(pdelt %in% c(0,1))])))[as.numeric(cut(pdelt[!(pdelt %in% c(0,1))],breaks = length(unique(pdelt[!(pdelt %in% c(0,1))]))))]))
+
+
+plot(lung.survfit,col=c("dodgerblue1","hotpink"),mark.time=F,lwd=c(2,2),
+	ylab="Survival",xlab="") ## sex=1 is hotpink
+for (i in 1:length(time.diff)){rug(time.diff[i],col=COL[i],lwd=1.2,ticksize=0.04)}
+axis(side=1)
+mtext("Days",side=1,line=2.25)
+
+legend(750,1,c("Females","Males"),col=c("hotpink","dodgerblue1"),lty=1,lwd=2,bty="n")
+text(900,0.82,"ID zone is +/- 5%")
+
+par(xpd=TRUE)
+legend(125,-0.175,c("pdelta=0","0 < pdelta < 1","pdelta=1"),text.width=c(60,120,150),
+		col=c("#00ea6e","#D8D8D8","#ff0000"),lwd=2,lty=1,horiz=TRUE,bty="n")
+par(xpd=FALSE)
+
+
+
+## CI plot to illustrate...
+
+par(xpd=FALSE)
+plot(time.diff,pred.diff,ylim=c(-0.1,0.35),xlab="",ylab="Difference",type="n")
+axis(side=1)
+mtext("Days",side=1,line=2.25)
+rect(0,-0.05,max(time.diff),0.05,col=rgb(208,216,232,max=255),border=NA)
+lines(time.diff,pred.2-pred.1,lwd=2,col="black")
+abline(h=0,lty=2,lwd=0.5)
+
+lines(time.diff,ub,lty=2,col="red")
+lines(time.diff,lb,lty=2,col="red")
+
+for (i in 1:length(time.diff)){rug(time.diff[i],col=COL[i],lwd=1.2,ticksize=0.04)}
+axis(side=1)
+par(xpd=TRUE)
+legend(125,-0.175,c("pdelta=0","0 < pdelta < 1","pdelta=1"),text.width=c(60,120,150),
+		col=c("#00ea6e","#D8D8D8","#ff0000"),lwd=2,lty=1,horiz=TRUE,bty="n")
+par(xpd=FALSE)
+
+legend(675,0.37,c("Difference","95% CI"),col=c("black","red"),lty=c(1,2),lwd=2,bty="n")
+
+text(800,0.31,"ID zone is +/- 5%")
+
+##
+
+################################################
+#### Links to examples
+
+http://eurheartj.oxfordjournals.org/content/32/14/1748
+
+
+###
+##
+#
