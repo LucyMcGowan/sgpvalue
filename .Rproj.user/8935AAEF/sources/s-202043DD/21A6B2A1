@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1506379843913.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "21A6B2A1",
+    "lastKnownWriteTime" : 1506380433,
+    "last_content_update" : 1506380433687,
+    "path" : "~/Documents/wonderland/sgpvalue/sgpvalue/app.R",
+    "project_path" : "sgpvalue/app.R",
+    "properties" : {
+        "cursorPosition" : "12,26",
+        "scrollLine" : "0"
+    },
+    "relative_order" : 7,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
