@@ -2,4 +2,7 @@
 
 export(compare_p)
 export(p_delta)
+export(power_alt)
 export(power_curves)
+export(power_inconclusive)
+export(power_null)

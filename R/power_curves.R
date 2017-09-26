@@ -1,11 +1,10 @@
 #' Power Curves varying delta
 #'
-#' The data for this function are generated where the standardized \eqn{\theta} is from -3 to 3, so
-#' \eqn{\delta} values, values for the width of the indifference zone, should be certainly be smaller.
-#' @param n Numeric. The sample size
-#' @param delta Numeric vector. The width of the indifference zone in SD units. Should be between
-#'  -3 and 3, as this is the range of the \eqn{\theta} space (and likely much smaller).
-#' @param truth Character. True data generating mechanism - must be one of the following:
+#' @param delta Numeric vector. The width of the indifference zone in SD units.
+#' @param theta Numeric vector. The "true" effect size (i.e., the default is `seq(-3, 3, 0.001`).
+#' @param n Numeric. The sample size.
+#' @param prob Character. The probability of interest (i.e., if you are interested in the probability that
+#'   \eqn{p_\delta = 0}{p\delta = 0} use `null`). Must be one of the following:
 #'   * null
 #'   * alternative
 #'   * inconclusive
@@ -17,103 +16,147 @@
 #' ## Figure S3 from the second generation P-value paper. The relationship between
 #' ## the probability that p_delta = 0 varying delta.
 #'
-#' power_curves(n = 10, delta = c(0, 1/30, 1/2, 1), truth = "null")
+#' power_curves(delta = c(0, 1/30, 1/2, 1), n = 10, prob = "null")
 #'
 #' ## Figure S5 from the second generation P-value paper. The relationship
-#' ## between probability of data supported compatibility 517 with the null hypothesis,
+#' ## between probability of data supported compatibility with the null hypothesis,
 #' ## and various deltas
 #'
 #' ## n = 40 (Figure S5 left)
-#' power_curves(n = 40, delta = c(0, 1/30, 1/2, 1), truth = "alternative")
+#' power_curves(delta = c(0, 1/30, 1/2, 1), n = 40, prob = "alternative")
 #' ## n = 200 (Figure S5 right)
-#' power_curves(n = 200, delta = c(0, 1/30, 1/2, 1), truth = "alternative")
+#' power_curves(delta = c(0, 1/30, 1/2, 1), n = 200, prob = "alternative")
 #'
 #' ## Figure S6 from the second generation P-value paper. The relationship between
 #' ## the probability of an inconclusive result and various deltas.
 #'
 #' ## n = 20 (Figure S6 left)
-#' power_curves(n = 20, delta = c(0, 1/30, 1/2, 1), truth = "inconclusive")
+#' power_curves(delta = c(0, 1/30, 1/2, 1), n = 20, prob = "inconclusive")
 #' ## n = 200 (Figure S6 right)
-#' power_curves(n = 200, delta = c(0, 1/30, 1/2, 1), truth = "inconclusive")
-power_curves <- function(n, delta, truth = "null") {
+#' power_curves(delta = c(0, 1/30, 1/2, 1), n = 200, prob = "inconclusive")
+power_curves <- function(delta, n, theta = seq(-3, 3, 0.001), prob = "null") {
 
-  if (!(truth %in% c("null", "alternative", "inconclusive"))) {
+  if (!(prob %in% c("null", "alternative", "inconclusive"))) {
     stop("Parameter `truth` must be one of the following: \n  * null\n  * alternative\n  * inconclusive")
   }
 
-  theta <- seq(-3, 3, 0.001)
-  if (truth == "null") {
-    p <- purrr::map(delta, power_null, n = n, theta = theta)
+  if (prob == "null") {
+    p <- power_null(delta = delta, n = n, theta = theta)
     graphics::plot(theta,
-         p[[1]],
-         type = "n",
-         ylim = c(0, 1),
-         xlim = c(-max(delta) - 2, max(delta) + 2),
-         xlab = "Alternative (SD units)",
-         ylab="Probability")
-    for (i in seq_along(p)) {
-      graphics::lines(theta, p[[i]], lty = 1, lwd = 1, col = i)
+                   p[p$delta == delta[1], "p"],
+                   type = "n",
+                   ylim = c(0, 1),
+                   xlim = range(theta),
+                   xlab = "Alternative (SD units)",
+                   ylab="Probability")
+    for (i in 1:length(delta)) {
+      graphics::lines(theta, p[p$delta == delta[i], "p"], lty = 1, lwd = 1, col = i)
     }
     graphics::abline(h = 0.05, lwd = 0.5, lty = 2)
   }
 
-  if (truth == "alternative") {
-    p <- purrr::map(delta, power_alt, n = n, theta = theta)
+  if (prob == "alternative") {
+    p <- power_alt(delta = delta, n = n, theta = theta)
     graphics::plot(theta,
-         p[[1]],
-         type = "n",
-         ylim = c(0, 1),
-         xlim = c(-max(delta) - 2, max(delta) + 2),
-         xlab = "Alternative (SD units)",
-         ylab = "Probability")
-    for (i in seq_along(p)) {
-      graphics::lines(theta, p[[i]], lty = 1, lwd = 1, col = i)
+                   p[p$delta == delta[1], "p"],
+                   type = "n",
+                   ylim = c(0, 1),
+                   xlim = range(theta),
+                   xlab = "Alternative (SD units)",
+                   ylab = "Probability")
+    for (i in 1:length(delta)) {
+      graphics::lines(theta, p[p$delta == delta[i], "p"], lty = 1, lwd = 1, col = i)
     }
     graphics::abline(h = 0.05, lty = 2)
   }
 
-  if (truth == "inconclusive") {
-    p_weak <- purrr::map(delta, power_inconclusive, n = n, theta = theta)
+  if (prob == "inconclusive") {
+    p <- power_inconclusive(delta = delta, n = n, theta = theta)
 
     graphics::par(yaxs = "i")
 
     graphics::plot(theta,
-         p_weak[[1]],
-         type = "n",
-         ylim = c(0, length(p_weak)),
-         xlim = c(-max(delta) - 2, max(delta) + 2),
-         xlab = "Alternative (SD units)",
-         ylab = "Probability",
-         yaxt = "n")
+                   p[delta == p$delta[1], "p"],
+                   type = "n",
+                   ylim = c(0, length(delta)),
+                   xlim = range(theta),
+                   xlab = "Alternative (SD units)",
+                   ylab = "Probability",
+                   yaxt = "n")
 
     graphics::axis(2,
-         at = seq(0, length(p_weak), by = .25),
-         label = c(0, rep(c("", .5, "", 0), length(p_weak))),
-         las=2)
+                   at = seq(0, length(delta), by = .25),
+                   label = c(0, rep(c("", .5, "", 0), length(delta))),
+                   las=2)
 
     graphics::abline(h = 0, lty = 2, lwd = 0.5)
-    for (i in seq_along(p_weak)) {
+    for (i in 1:length(delta)) {
       graphics::rect(-delta[i],
-           (length(p_weak) - i + 1),
-           delta[i],
-           length(p_weak) - i,
-           col = grDevices::rgb(1,0.9,1,0.6),
-           border = F)
+                     (length(delta) - i + 1),
+                     delta[i],
+                     length(delta) - i,
+                     col = grDevices::rgb(1,0.9,1,0.6),
+                     border = F)
       graphics::abline(h = i, lty = 2, lwd = 0.5)
-      graphics::lines(theta, p_weak[[i]] + (length(p_weak) - i), lty = 1, lwd = 1, col = i)
-      graphics::text(1.6, length(p_weak) - i + 0.5, bquote(delta~"="~.(round(delta[i], 2))))
+      graphics::lines(theta, p[p$delta == delta[i], "p"] + (length(delta) - i), lty = 1, lwd = 1, col = i)
+      graphics::text(1.6, length(delta) - i + 0.5, bquote(delta~"="~.(round(delta[i], 2))))
     }
   }
 }
 
-## Power under the null
+#' Probability that \eqn{p_\delta = 0}{p\delta = 0}
+#'
+#' @param delta Numeric vector. The width of the indifference zone in SD units.
+#' @param n Numeric. The sample size.
+#' @param theta The "true" effect size.
+#'
+#' @return Data frame with the following columns:
+#'   * delta: The width of the simulated indifference zone
+#'   * n: The sample size
+#'   * theta: the "true" effect size
+#'   * p: The probability \eqn{p_\delta = 0}{p\delta = 0}
+#' @export
+#'
+#' @examples
+#' power_null(
+#'    delta = c(0, 1/30, 1/2, 1),
+#'    n = 33,
+#'    theta = seq(-3, 3, 0.01)
+#'    )
+#'
 power_null <- function(delta, n, theta) {
-  stats::pnorm(sqrt(n) * (-delta) - sqrt(n) * theta - 1.96) +
+  if (length(delta) > 1) {
+    return(do.call(rbind, purrr::map(delta, power_null, n = n, theta = theta)))
+  }
+  p <- stats::pnorm(sqrt(n) * (-delta) - sqrt(n) * theta - 1.96) +
     stats::pnorm(-sqrt(n) * delta + sqrt(n) * theta - 1.96)
+  data.frame(delta = delta, n = n, theta = theta, p = p)
 }
 
-## Power under the alternative
+#' Probability that \eqn{p_\delta = 1}{p\delta = 1}
+#'
+#' @param delta Numeric vector. The width of the indifference zone in SD units.
+#' @param n Numeric. The sample size.
+#' @param theta The "true" effect size.
+#'
+#' @return Data frame with the following columns:
+#'   * delta: The width of the simulated indifference zone
+#'   * n: The sample size
+#'   * theta: the "true" effect size
+#'   * p: The probability \eqn{p_\delta = 1}{p\delta = 1}
+#'
+#' @export
+#' @examples
+#' power_alt(
+#'    delta = c(0, 1/30, 1/2, 1),
+#'    n = 33,
+#'    theta = seq(-3, 3, 0.01)
+#'    )
+#'
 power_alt <- function(delta, n, theta) {
+  if (length(delta) > 1) {
+    return(do.call(rbind, purrr::map(delta, power_alt, n = n, theta = theta)))
+  }
   p <- stats::pnorm(sqrt(n) * delta - sqrt(n) * theta - 1.96) -
     stats::pnorm(sqrt(n) * (-delta) - sqrt(n) * theta + 1.96)
 
@@ -121,10 +164,34 @@ power_alt <- function(delta, n, theta) {
     p <- rep(0, length(theta))
   }
 
-  p
+  data.frame(delta = delta, n = n, theta = theta, p = p)
 }
 
-## Power when inconclusive
+#' Probability that \eqn{0 < p_\delta < 1}{0 < p\delta < 1}
+#'
+#' @param delta Numeric vector. The width of the indifference zone in SD units.
+#' @param n Numeric. The sample size.
+#' @param theta The "true" effect size.
+#'
+#' @return Data frame with the following columns:
+#'   * delta: The width of the simulated indifference zone
+#'   * n: The sample size
+#'   * theta: the "true" effect size
+#'   * p: The probability \eqn{0 < p_\delta < 1}{0 < p\delta < 1}
+#' @export
+#'
+#' @examples
+#' power_inconclusive(
+#'    delta = c(0, 1/30, 1/2, 1),
+#'    n = 33,
+#'    theta = seq(-3, 3, 0.01)
+#'    )
+#'
 power_inconclusive <- function(delta, n, theta) {
-  1 - power_null(delta, n, theta) - power_alt(delta, n, theta)
+  if (length(delta) > 1) {
+    return(do.call(rbind, purrr::map(delta, power_inconclusive, n = n, theta = theta)))
+  }
+  p <- 1 - power_null(delta, n, theta)[["p"]] - power_alt(delta, n, theta)[["p"]]
+
+  data.frame(delta = delta, n = n, theta = theta, p = p)
 }

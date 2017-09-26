@@ -49,12 +49,12 @@ compare_p(data, delta_a = 144, delta_b = 148, h0 = 146)
 
 ### Operating characteristics
 
-You can observe the operating characteristics using the `power_curves()` function. This allows you to input `n` and varying `delta` values and observe power curves under the `null`, `alternative`, or `inconclusive` data generation.
+You can observe the operating characteristics using the `power_curves()` function. This allows you to input `n` and varying `delta` values and observe power curves for the `null`, `alternative`, or `inconclusive` p\_delta values.
 
 Figure S3 from the second generation P-value paper. The relationship between the probability that p\_delta = 0 varying delta.
 
 ``` r
-power_curves(n = 10, delta = c(0, 1/30, 1/2, 1), truth = "null")
+power_curves(delta = c(0, 1/30, 1/2, 1), n = 10, prob = "null")
 ```
 
 ![](README-fig_s3-1.png)
@@ -63,14 +63,14 @@ Figure S5 from the second generation P-value paper. The relationship between pro
 
 ``` r
 ## n = 40 (Figure S5 left)
-power_curves(n = 40, delta = c(0, 1/30, 1/2, 1), truth = "alternative")
+power_curves(delta = c(0, 1/30, 1/2, 1), n = 40, prob = "alternative")
 ```
 
 ![](README-fig_s5-1.png)
 
 ``` r
 ## n = 200 (Figure S5 right)
-power_curves(n = 200, delta = c(0, 1/30, 1/2, 1), truth = "alternative")
+power_curves(delta = c(0, 1/30, 1/2, 1), n = 200, prob = "alternative")
 ```
 
 ![](README-fig_s5-2.png)
@@ -79,14 +79,14 @@ Figure S6 from the second generation P-value paper. The relationship between the
 
 ``` r
 ## n = 20 (Figure S6 left)
-power_curves(n = 20, delta = c(0, 1/30, 1/2, 1), truth = "inconclusive")
+power_curves(delta = c(0, 1/30, 1/2, 1), n = 20, prob = "inconclusive")
 ```
 
 ![](README-fig_s6-1.png)
 
 ``` r
 ## n = 200 (Figure S6 right)
-power_curves(n = 200, delta = c(0, 1/30, 1/2, 1), truth = "inconclusive")
+power_curves(delta = c(0, 1/30, 1/2, 1), n = 200, prob = "inconclusive")
 ```
 
 ![](README-fig_s6-2.png)

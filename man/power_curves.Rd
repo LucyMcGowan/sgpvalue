@@ -4,15 +4,17 @@
 \alias{power_curves}
 \title{Power Curves varying delta}
 \usage{
-power_curves(n, delta, truth = "null")
+power_curves(delta, n, theta = seq(-3, 3, 0.001), prob = "null")
 }
 \arguments{
-\item{n}{Numeric. The sample size}
+\item{delta}{Numeric vector. The width of the indifference zone in SD units.}
 
-\item{delta}{Numeric vector. The width of the indifference zone in SD units. Should be between
--3 and 3, as this is the range of the \eqn{\theta} space (and likely much smaller).}
+\item{n}{Numeric. The sample size.}
 
-\item{truth}{Character. True data generating mechanism - must be one of the following:
+\item{theta}{Numeric vector. The "true" effect size (i.e., the default is \code{seq(-3, 3, 0.001}).}
+
+\item{prob}{Character. The probability of interest (i.e., if you are interested in the probability that
+\eqn{p_\delta = 0}{p\delta = 0} use \code{null}). Must be one of the following:
 \itemize{
 \item null
 \item alternative
@@ -23,29 +25,28 @@ power_curves(n, delta, truth = "null")
 A plot of the power curves
 }
 \description{
-The data for this function are generated where the standardized \eqn{\theta} is from -3 to 3, so
-\eqn{\delta} values, values for the width of the indifference zone, should be certainly be smaller.
+Power Curves varying delta
 }
 \examples{
 ## Figure S3 from the second generation P-value paper. The relationship between
 ## the probability that p_delta = 0 varying delta.
 
-power_curves(n = 10, delta = c(0, 1/30, 1/2, 1), truth = "null")
+power_curves(delta = c(0, 1/30, 1/2, 1), n = 10, prob = "null")
 
 ## Figure S5 from the second generation P-value paper. The relationship
-## between probability of data supported compatibility 517 with the null hypothesis,
+## between probability of data supported compatibility with the null hypothesis,
 ## and various deltas
 
 ## n = 40 (Figure S5 left)
-power_curves(n = 40, delta = c(0, 1/30, 1/2, 1), truth = "alternative")
+power_curves(delta = c(0, 1/30, 1/2, 1), n = 40, prob = "alternative")
 ## n = 200 (Figure S5 right)
-power_curves(n = 200, delta = c(0, 1/30, 1/2, 1), truth = "alternative")
+power_curves(delta = c(0, 1/30, 1/2, 1), n = 200, prob = "alternative")
 
 ## Figure S6 from the second generation P-value paper. The relationship between
 ## the probability of an inconclusive result and various deltas.
 
 ## n = 20 (Figure S6 left)
-power_curves(n = 20, delta = c(0, 1/30, 1/2, 1), truth = "inconclusive")
+power_curves(delta = c(0, 1/30, 1/2, 1), n = 20, prob = "inconclusive")
 ## n = 200 (Figure S6 right)
-power_curves(n = 200, delta = c(0, 1/30, 1/2, 1), truth = "inconclusive")
+power_curves(delta = c(0, 1/30, 1/2, 1), n = 200, prob = "inconclusive")
 }
