@@ -28,6 +28,14 @@
 #'   )
 #' compare_p(data, delta_lb = 144, delta_ub = 148, h0 = 146)
 compare_p <- function(data, delta_lb, delta_ub, h0, plot = TRUE) {
+  if (!is.data.frame(data) || !(c("xbar", "se") %in% names(data))) {
+    stop("Parameter `data` must be a data frame with columns:\n  * xbar\n  * se", call. = FALSE)
+  }
+
+  if (!(delta_lb < h0 && h0 < delta_ub)) {
+    stop("`delta_lb` must be less than `h0` which must be less than `delta_ub`", call. = FALSE)
+  }
+
   data$lb <- data$xbar - 1.96 * data$se
   data$ub <- data$xbar + 1.96 * data$se
   z1 <- (data$xbar - h0) / data$se
