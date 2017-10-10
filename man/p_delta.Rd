@@ -4,16 +4,16 @@
 \alias{p_delta}
 \title{Second Generation P-value}
 \usage{
-p_delta(lb, ub, delta_a, delta_b)
+p_delta(lb, ub, delta_lb, delta_ub)
 }
 \arguments{
 \item{lb}{Numeric. Lower bound of the observed effect}
 
 \item{ub}{Numeric. Upper bound of the observed effect}
 
-\item{delta_a}{Numeric. Lower bound of the indifference zone}
+\item{delta_lb}{Numeric. Lower bound of the indifference zone}
 
-\item{delta_b}{Numeric. Upper bound of the indifference zone}
+\item{delta_ub}{Numeric. Upper bound of the indifference zone}
 }
 \value{
 Numeric. Second generation p-value for the observed effect.

@@ -4,14 +4,14 @@
 \alias{compare_p}
 \title{Compare traditional, max, and second generation P-values across studies}
 \usage{
-compare_p(data, delta_a, delta_b, h0, plot = TRUE)
+compare_p(data, delta_lb, delta_ub, h0, plot = TRUE)
 }
 \arguments{
 \item{data}{Data frame with two variables \code{xbar} and \code{se}.}
 
-\item{delta_a}{Numeric. Lower bound of the indifference zone}
+\item{delta_lb}{Numeric. Lower bound of the indifference zone}
 
-\item{delta_b}{Numeric. Upper bound of the indifference zone}
+\item{delta_ub}{Numeric. Upper bound of the indifference zone}
 
 \item{h0}{Numeric. Value of the null hypothesis}
 
@@ -42,5 +42,5 @@ data <- data.frame(
   xbar = c(146, 145.5, 145, 146, 144, 143.5, 142, 141),
   se = c(0.5, 0.25, 1.25, 2.25, 1, 0.5, 1, 0.5)
   )
-compare_p(data, delta_a = 144, delta_b = 148, h0 = 146)
+compare_p(data, delta_lb = 144, delta_ub = 148, h0 = 146)
 }
