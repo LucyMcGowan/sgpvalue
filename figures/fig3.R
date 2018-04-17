@@ -7,6 +7,7 @@
 #' dashed lines show various traditional p-value cutoffs at the 0.05 level 
 #' (Bonferroni, Benjamini-Hochberg false discovery rate, and unadjusted).
 
+#' Authors: JDB and LDM
 library(sgpvalue)
 rep <- dim(leukdata)[[1]]
 gene <- seq(1, rep, 1)
