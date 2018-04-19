@@ -43,8 +43,8 @@ N <- nrow(NormalizedGeneDat)
 LeukDat <- cbind(NormalizedGeneDat_t,pData(Golub_Merge)[,c('ALL.AML','BM.PB','T.B.cell','Gender','PS','Source')])
 
 # Sort by ALL.AML status
-hold=LeukDat[with(LeukDat, order(LeukDat[7129])),]
-leukdata=t(hold[,-(7129:7134)])
+hold <- LeukDat[with(LeukDat, order(LeukDat[7129])),]
+leukdata <- t(hold[,-(7129:7134)])
 
 ####
 ###
