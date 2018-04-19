@@ -1,7 +1,7 @@
 ############################################################
 # Author: Sarah Fletcher Mercaldo, PhD
 # smercaldo@mgh.harvard.edu
-# Updated: April 2018, slight modificaiton by J. Blume
+# Updated: April 2018, slight modification by J. Blume
 #
 # Purpose: This script transforms the raw Golub (1999) gene expression data.
 # Data are rank normalized after dropping the extreme value.
