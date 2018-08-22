@@ -76,4 +76,4 @@ legend("topright",
        lwd = 2,
        bty = "n")
 
-text(900, 0.75, "Interval Null Zone\n is +/- 5%")
+text(900, 0.7, "Interval Null Zone\n is +/- 5%")
